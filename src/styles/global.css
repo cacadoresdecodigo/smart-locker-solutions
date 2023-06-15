@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+#container {
+  width: 1024px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* LOGO */
+#logo {
+  width: 190px;
+  height: 190px;
+}
+
+#logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NAV */
+#main_nav {
+  display: flex;
+  box-shadow: 2px 2px 1px 1px #333;
+}
+
+#main_nav a {
+  padding: 0.2rem 1.4rem;
+  border: solid 1px;
+  text-align: center;
+}
+
+/* LOGIN BTN */
+
+#login_btn {
+  background: #1c74d8;
+  color: #dddada;
+
+  border: solid 1px #333;
+  padding: 0.2rem 1.4rem;
+  box-shadow: 2px 2px 1px 1px #333;
+
+  text-align: center;
+}
+
+/* CONTEUDO PRINCIPAL */
+#content {
+  flex-grow: 1;
+  background-color: cornflowerblue;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
