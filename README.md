@@ -8,6 +8,7 @@ Esse é um projeto sobre smart locker utilizado para conclusão do primeiro seme
 ## 🚀 Tecnologias
 O projeto foi desenvolvido durante as aulas de lógica de programação com as seguintes tecnologias:
 
+- JavaScript
 - HTML
 - CSS
 - Github
