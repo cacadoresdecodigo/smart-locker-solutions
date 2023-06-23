@@ -1,0 +1,63 @@
+#content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: center;
+  align-items: center;
+  margin: 16px;
+}
+
+#main_cadastro_editar {
+}
+
+#cadastro_cabecalho_editar {
+  margin: 8px;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cadastro_cabecalho_h3_editar {
+  margin: 0px;
+  padding: 8px;
+  font-size: 26px;
+  grid-column: 2;
+}
+
+
+#cadastro_dados_usuario_editar {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  margin: 16px;
+}
+
+.inpt-dados-usuario {
+  font-size: 16px;
+}
+
+#cadastro_rodape {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 8px;
+  place-items: center;
+  place-self: center;
+}
+
+#cadastro_rodape button {
+  background-color: rgb(209, 67, 122);
+  color: #fff;
+  padding: 16px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+}
+
+button:hover {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+

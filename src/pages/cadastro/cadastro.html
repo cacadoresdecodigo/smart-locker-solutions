@@ -7,6 +7,7 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="../../styles/reset.css" />
     <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/cadastro.css">
 </head>
 
 <body>
@@ -23,20 +24,21 @@
         <main id="content">
             <div id="main_cadastro">
                 <div id="cadastro_cabecalho">
-                    <h3>Crie seu cadastro</h3>
-                    <p>Para ser cliente é necessário preencher corretamente o formulário abaixo com os respectivos dados cadastrais. Os campos com * são de preenchimento obrigatório.</p>
+                   <div class="cadastro_cabecalho_h3"><h3>Crie seu cadastro</h3></div> 
+                    <div class="cadastro_cabecalho_p"><p>Para ser cliente é necessário preencher corretamente o formulário abaixo com os respectivos dados cadastrais.</p></div>
                 </div>
-                <div id="cadastro_dados_pessoais">
-                    <span>Razão social </span><input>
-                    <span>Nome fantasia </span><input>
-                    <span>CNPJ </span><input>
-                    <span>Telefone </span><input>
-                    <span>E-mail </span><input>
-                    <span>Senha </span><input type="password">
+                <div id="cadastro_dados_usuario">
+                  <div class="cadastro_dados_usuario_razaosocial"><span>Razão social </span><input class="inpt-dados-usuario"></div>  
+                    <div class="cadastro_dados_usuario_nomefantasia"><span>Nome fantasia </span><input class="inpt-dados-usuario"></div>
+                    <div class="cadastro_dados_usuario_cnpj"><span>CNPJ </span><input class="inpt-dados-usuario"></div>
+                    <div class="cadastro_dados_usuario_telefone"><span>Telefone </span><input class="inpt-dados-usuario"></div>
+                    <div class="cadastro_dados_usuario_email"><span>E-mail </span><input class="inpt-dados-usuario"></div>
+                    <div class="cadastro_dados_usuario_senha"><span>Senha </span><input type="password" class="inpt-dados-usuario"></div>
                 </div>
+
                 <div id="cadastro_rodape">
-                    <button>Cadastre-se</button>
-                    <p>Ao preencher o formulário acima você concorda com todos os nossos Termos de Uso e nossa Política de Privacidade.</p>
+                    <div class="cadastro_rodape_button"><button>Cadastre-se</button></div>
+                    <div class="cadastro_rodape_p"><p>Ao preencher o formulário a cima você concorda com todos os nossos Termos de Uso e nossa Política de Privacidade.</p></div>
                 </div>
 
 
