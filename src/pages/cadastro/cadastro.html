@@ -1,52 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
     <link rel="stylesheet" href="../../styles/reset.css" />
     <link rel="stylesheet" href="../../styles/global.css" />
-    <link rel="stylesheet" href="../../styles/cadastro.css">
-</head>
+    <link rel="stylesheet" href="../../styles/cadastro.css" />
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <header>
-            <div id="logo"><img src="../../assets/logo.png" alt="Logo"></div>
-            <nav id="main_nav">
-                <a href="../index/index.html">Home</a>
-                <a href="../produtos/produtos.html">Nossos Produtos</a>
-                <a href="../sobre/sobre.html">Quem Somos</a>
-            </nav>
-            <a id="login_btn" href="../login/login.html">Login</a>
-        </header>
-        <main id="content">
-            <div id="main_cadastro">
-                <div id="cadastro_cabecalho">
-                   <div class="cadastro_cabecalho_h3"><h3>Crie seu cadastro</h3></div> 
-                    <div class="cadastro_cabecalho_p"><p>Para ser cliente é necessário preencher corretamente o formulário abaixo com os respectivos dados cadastrais.</p></div>
-                </div>
-                <div id="cadastro_dados_usuario">
-                  <div class="cadastro_dados_usuario_razaosocial"><span>Razão social </span><input class="inpt-dados-usuario"></div>  
-                    <div class="cadastro_dados_usuario_nomefantasia"><span>Nome fantasia </span><input class="inpt-dados-usuario"></div>
-                    <div class="cadastro_dados_usuario_cnpj"><span>CNPJ </span><input class="inpt-dados-usuario"></div>
-                    <div class="cadastro_dados_usuario_telefone"><span>Telefone </span><input class="inpt-dados-usuario"></div>
-                    <div class="cadastro_dados_usuario_email"><span>E-mail </span><input class="inpt-dados-usuario"></div>
-                    <div class="cadastro_dados_usuario_senha"><span>Senha </span><input type="password" class="inpt-dados-usuario"></div>
-                </div>
-
-                <div id="cadastro_rodape">
-                    <div class="cadastro_rodape_button"><button>Cadastre-se</button></div>
-                    <div class="cadastro_rodape_p"><p>Ao preencher o formulário a cima você concorda com todos os nossos Termos de Uso e nossa Política de Privacidade.</p></div>
-                </div>
-
-
+      <header>
+        <div id="logo"><img src="../../assets/logo.png" alt="Logo" /></div>
+        <nav id="main_nav">
+          <a href="../index/index.html">Home</a>
+          <a href="../produtos/produtos.html">Nossos Produtos</a>
+          <a href="../sobre/sobre.html">Quem Somos</a>
+        </nav>
+        <a id="login_btn" href="../login/login.html">Login</a>
+      </header>
+      <main id="content">
+        <div id="cadastro_cabecalho">
+          <div class="cadastro_cabecalho_h3"><h3>Crie seu cadastro</h3></div>
+          <div class="cadastro_cabecalho_p">
+            <p>
+              Para ser cliente é necessário preencher corretamente o formulário abaixo com os respectivos dados
+              cadastrais.
+            </p>
+          </div>
+        </div>
+        <!-- formuario de cadastro  -->
+        <div class="formulario">
+          <div class="formulario_linha">
+            <div class="formulario_campo">
+              <label>Razão social</label>
+              <input class="" />
             </div>
-        </main>
-        <footer>&copy caçadores de código 2023</footer>
+            <div class="formulario_campo">
+              <label>Nome fantasia</label>
+              <input class="" />
+            </div>
+          </div>
+          <div class="formulario_linha">
+            <div class="formulario_campo">
+              <label>CNPJ</label>
+              <input class="" />
+            </div>
+            <div class="formulario_campo">
+              <label>Telefone</label>
+              <input class="" />
+            </div>
+          </div>
+          <div class="formulario_linha">
+            <div class="formulario_campo">
+              <label>E-mail</label>
+              <input type="" class="" />
+            </div>
+          </div>
+          <div class="formulario_linha">
+            <div class="formulario_campo">
+              <label>Senha</label>
+              <input type="password" class="" />
+            </div>
+          </div>
+          <div class="formulario_acoes">
+            <button class="botao_primario">Cadastre-se</button>
+            <p>
+              Ao preencher o formulário a cima você concorda com todos os nossos Termos de Uso e nossa Política de
+              Privacidade.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- </div> -->
+      </main>
+      <footer>&copy caçadores de código 2023</footer>
     </div>
-
-</body>
-
+  </body>
 </html>

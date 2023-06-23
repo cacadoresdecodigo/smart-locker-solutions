@@ -7,47 +7,66 @@
   margin: 16px;
 }
 
-#main_cadastro {
-}
-
 #cadastro_cabecalho {
-  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 8px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  margin: 8px 16px;
 }
 
 .cadastro_cabecalho_h3 {
   margin: 0px;
   padding: 8px;
   font-size: 26px;
-  grid-column: 2;
 }
 
 .cadastro_cabecalho_p {
-  grid-column: 2;
+  max-width: 300px;
 }
 
-#cadastro_dados_usuario {
-  display: grid;
-  gap: 8px;
-  padding: 16px;
-  margin: 16px;
+.formulario {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 600px;
 }
 
-.inpt-dados-usuario {
-  font-size: 16px;
+.formulario_linha {
+  display: flex;
 }
 
-#cadastro_rodape {
+.formulario_campo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
   padding: 8px;
-  place-items: center;
-  place-self: center;
 }
 
-#cadastro_rodape button {
-  background-color: rgb(209, 67, 122);
-  color: #fff;
+.formulario_campo input {
+  padding: 8px;
+}
+
+.formulario_campo label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.formulario_acoes {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.formulario_acoes p {
+  font-size: 13px;
+  width: 260px;
+}
+
+.botao_primario {
+  background-color: #f57575da;
+  color: #000000;
   padding: 16px 24px;
   text-decoration: none;
   font-size: 16px;
@@ -56,13 +75,8 @@
   text-align: center;
 }
 
-button:hover {
+.botao_primario:hover {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-}
-
-.cadastro_rodape_p {
-  padding: 16px;
-  font-size: 14px;
 }
