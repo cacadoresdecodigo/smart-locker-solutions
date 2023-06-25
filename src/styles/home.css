@@ -1,0 +1,80 @@
+#content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 16px;
+}
+
+
+#home_cabeçalho{
+
+    padding: 15px;
+}
+#home_info{
+
+    font-size: 17px;
+    margin: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.home_habilidades{
+    width: 400px;
+    height: auto;
+    
+}
+
+#home_icons{
+    margin: 50px;
+    margin-left: 110px;
+    display: flex;
+    align-items: center;
+
+}
+
+.home_img_pessoas{
+
+    margin-right: 50px;
+}
+
+
+
+.home_img_monitorar{
+
+    margin-right: 20px;
+    margin-left: 60px;
+}
+figure {
+
+    width: 400px;
+    height: auto;
+}
+figure img{
+
+    width: 400px;
+    height: auto;
+}
+
+#home_rodape{
+    padding: 8px;
+    place-items: center;
+    place-self: center;
+    margin: 5px;
+}
+
+.home_cadastro_button button{
+
+    padding: 10px 24px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+button:hover {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
