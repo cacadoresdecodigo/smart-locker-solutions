@@ -9,13 +9,12 @@
 
 
 #home_cabeçalho{
-
     padding: 15px;
 }
 #home_info{
 
     font-size: 17px;
-    margin: 35px;
+    margin: 5px auto;
     display: flex;
     align-items: center;
 }
@@ -23,11 +22,11 @@
 .home_habilidades{
     width: 400px;
     height: auto;
-    
+
 }
 
 #home_icons{
-    margin: 50px;
+    margin: 0 auto;
     margin-left: 110px;
     display: flex;
     align-items: center;
@@ -35,15 +34,18 @@
 }
 
 .home_img_pessoas{
-
-    margin-right: 50px;
+ margin-right: 50px;
 }
 
+.home_img_seta{
 
+    margin-right: 50px;
+    margin-left: 50px;
+}
 
 .home_img_monitorar{
 
-    margin-right: 20px;
+    margin-right: 50px;
     margin-left: 60px;
 }
 figure {
@@ -61,7 +63,7 @@ figure img{
     padding: 8px;
     place-items: center;
     place-self: center;
-    margin: 5px;
+    margin: 0 auto;
 }
 
 .home_cadastro_button button{
