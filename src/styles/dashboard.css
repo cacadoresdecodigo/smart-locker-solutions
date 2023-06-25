@@ -1,0 +1,99 @@
+#dropdown-menu {
+  padding: 0.4rem 2rem;
+  border: solid 1px;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+h1 {
+  align-self: center;
+}
+
+#cadastro_btn {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  height: 35px;
+
+  align-self: flex-start;
+
+  background-color: #e24a17;
+
+  box-shadow: 2px 2px 1px 1px #333;
+  padding: 0.2rem 1.4rem;
+
+  border: solid 1px;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#cadastro_btn:hover {
+  background-color: #eb6639;
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+  border-spacing: 0;
+  min-width: 800px;
+  width: 100%;
+}
+
+table * {
+  border-bottom: solid 1px;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+table td:last-child {
+  text-align: left;
+}
+
+table thead {
+  background-color: #c3baba;
+}
+
+table tbody {
+  white-space: nowrap;
+}
+
+table tbody tr td:last-child {
+  border-bottom: none;
+}
+
+table tbody tr td:nth-child(1) {
+  border-left: solid 1px;
+}
+
+table tbody tr td:nth-last-child(2) {
+  border-right: solid 1px;
+}
+
+.editar_btn {
+  border: solid 1px #333;
+  border-radius: 5px;
+  background-color: #e4ec04;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 2px 2px 1px 1px #333;
+  cursor: pointer;
+}
+
+.excluir_btn {
+  border: solid 1px;
+  border-radius: 5px;
+  background-color: #af1818;
+  color: #d7dce1;
+  font-weight: bold;
+  box-shadow: 2px 2px 1px 1px #333;
+  cursor: pointer;
+}

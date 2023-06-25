@@ -7,57 +7,113 @@
   margin: 16px;
 }
 
-#main_cadastro_editar {
-}
-
-#cadastro_cabecalho_editar {
-  margin: 8px;
+#cadastro_cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 8px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  margin: 8px 16px;
 }
 
-.cadastro_cabecalho_h3_editar {
+.cadastro_cabecalho_h3 {
   margin: 0px;
   padding: 8px;
   font-size: 26px;
-  grid-column: 2;
 }
 
-
-#cadastro_dados_usuario_editar {
-  display: grid;
-  gap: 8px;
-  padding: 16px;
-  margin: 16px;
+.cadastro_cabecalho_p {
+  max-width: 300px;
 }
 
-.inpt-dados-usuario {
-  font-size: 16px;
+.formulario {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 600px;
 }
 
-#cadastro_rodape {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.formulario_linha {
+  display: flex;
+}
+
+.formulario_campo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
   padding: 8px;
-  place-items: center;
-  place-self: center;
 }
 
-#cadastro_rodape button {
-  background-color: rgb(209, 67, 122);
-  color: #fff;
-  padding: 16px 24px;
+.formulario_campo input {
+  padding: 8px;
+}
+
+.formulario_campo label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.formulario_acoes {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+padding: 4px;
+}
+
+.formulario_acoes p {
+  font-size: 13px;
+  width: 260px;
+}
+
+.botao_secundario {
+  background-color: #f57575da;
+  color: #000000;
+  padding: 14px 24px;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
   border-radius: 4px;
   text-align: center;
+  margin: 4px;
 }
 
-button:hover {
+.botao_terciario {
+  background-color: #f57575da;
+  color: #000000;
+  padding: 14px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  margin: 4px;
+}
+
+.botao_quartenario {
+  background-color: #f57575da;
+  color: #000000;
+  padding: 14px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  margin: 4px;
+}
+
+.botao_secundario:hover {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.botao_terciario:hover {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
+.botao_quartenario:hover {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
