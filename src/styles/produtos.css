@@ -8,74 +8,53 @@
 }
 
 
-#home_cabeçalho{
-    padding: 15px;
-}
-#home_info{
-
-    margin: 5px auto;
-    display: flex;
-    align-items: center;
-}
-
-#home_habilidades_central{
-    font-size: 17px;
-    display: flex;
-}
-.home_habilidades{
-    width: 400px;
-    height: auto;
-
-}
-
 figure {
 
-    width: 400px;
+    width: 500px;
     height: auto;
 }
 
-figure img {
+figure img{
 
-    width: 400px;
+    width: 450px;
     height: auto;
 }
 
-#home_icons{
+#nossos_produtos_info{
 
-    margin: 0 auto;
-    margin-left: 110px;
     display: flex;
-    align-items: center;
-    padding: 30px;
+    margin: 0 auto;
+}
+.nossos_produtos_G p{
 
+    font-size: 12px;
+    margin-right: 20px;
 }
 
-.home_img_pessoas{
- margin-right: 50px;
+.nossos_produtos_M p{
+
+    font-size: 12px;
+    margin-right: 20px;
 }
 
-.home_img_seta{
-    margin-left: 50px;
+.nossos_produtos_P p{
+
+    font-size: 12px;
 }
 
-.home_img_monitorar{
+#nossos_produtos_rodape{
 
-    margin-right: 40px;
-    margin-left: 60px;
-}
-
-
-#home_rodape{
-    padding: 8px;
+    padding: 15px;
     place-items: center;
     place-self: center;
     margin: 0 auto;
 }
 
+.nossos_produtos_text h4{
 
-
-.home_cadastro_button button{
-
+    margin: 10px;
+}
+.nossos_produtos_button button{
 
     padding: 10px 24px;
     text-decoration: none;
@@ -84,8 +63,10 @@ figure img {
     cursor: pointer;
     border-radius: 5px;
 }
+
 button:hover {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
+
