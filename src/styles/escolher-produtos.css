@@ -1,3 +1,9 @@
+#dropdown-menu {
+  padding: 0.4rem 2rem;
+  border: solid 1px;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
 
 
 #content {
@@ -55,30 +61,42 @@
   margin-bottom: 4px;
 }
 
+.formulario_campo h3 {
+  padding: 16px;
+  text-align: center;
+  margin-top: 16px;
+}
+
 .formulario_acoes {
   display: flex;
   align-items: center;
-  padding: 8px;
+  margin-top: 8px;
+  padding: 4px;
+  justify-content: center;
 }
 
-.formulario_acoes p {
-  font-size: 13px;
-  width: 260px;
+.inpt_descreva_pedido{
+  height: 150px;
+  line-height: normal;
 }
 
 .botao_primario {
   background-color: #f57575da;
   color: #000000;
-  padding: 16px 24px;
+  padding: 14px 24px;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
   border-radius: 4px;
   text-align: center;
+  margin: 4px;
 }
+
+
 
 .botao_primario:hover {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
+

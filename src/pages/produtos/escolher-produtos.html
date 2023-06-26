@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Editar cadastro</title>
+    <title>Escolher produtos</title>
     <link rel="stylesheet" href="../../styles/reset.css" />
     <link rel="stylesheet" href="../../styles/global.css" />
-    <link rel="stylesheet" href="../../styles/editar-cadastro.css">
+    <link rel="stylesheet" href="../../styles/escolher-produtos.css">
 </head>
 
 <body>
@@ -27,47 +27,33 @@
         </header>
         <main id="content">
             <div id="cadastro_cabecalho">
-                <div class="cadastro_cabecalho_h3"><h3>Editar cadastro</h3></div>
+                <div class="cadastro_cabecalho_h3"><h3>Faça seu pedido</h3></div>
             </div>
               <!-- formuario de cadastro  -->
               <div class="formulario">
                 <div class="formulario_linha">
                   <div class="formulario_campo">
-                    <label>Razão social</label>
-                    <input class="" />
+                    <label>Tamanho P</label>
+                    <input class="" type="number" min="1" max="9"/>
                   </div>
                   <div class="formulario_campo">
-                    <label>Nome fantasia</label>
-                    <input class="" />
+                    <label>Tamanho M</label>
+                    <input class="" type="number" min="1" max="9" />
+                  </div>
+                  <div class="formulario_campo">
+                    <label>Tamanho G</label>
+                    <input class="" type="number" min="1" max="9" />
                   </div>
                 </div>
-                <div class="formulario_linha">
-                  <div class="formulario_campo">
-                    <label>CNPJ</label>
-                    <input class="" />
+                  <div class="formulario_linha">
+                    <div class="formulario_campo">
+                    <h3>Escreva o seu pedido personalizado</h3>
+                    <label>Descreva seu pedido</label>
+                    <textarea class="inpt_descreva_pedido"> </textarea>
+                    </div>
                   </div>
-                  <div class="formulario_campo">
-                    <label>Telefone</label>
-                    <input class="" />
-                  </div>
-                </div>
-                <div class="formulario_linha">
-                  <div class="formulario_campo">
-                    <label>E-mail</label>
-                    <input type="" class="" />
-                  </div>
-                </div>
-                <div class="formulario_linha">
-                  <div class="formulario_campo">
-                    <label>Senha</label>
-                    <input type="password" class="" />
-                  </div>
-                </div>
                 <div class="formulario_acoes">
-                  <button class="botao_secundario">Salvar</button>
-                  <button class="botao_terciario">Excluir conta</button>
-                  <button class="botao_quartenario">Cancelar plano</button>
-               
+                  <button class="botao_primario">Enviar</button>                         
                 </div>
               </div>
         </main>
