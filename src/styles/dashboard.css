@@ -11,8 +11,11 @@
   padding: 1rem;
 }
 
-h1 {
-  align-self: center;
+h3 {
+  margin: 0px;
+  padding: 8px;
+  font-size: 26px;
+  text-align: center;
 }
 
 #cadastro_btn {
