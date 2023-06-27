@@ -26,7 +26,7 @@ h3 {
 
   align-self: flex-start;
 
-  background-color: #e24a17;
+  background-color: #FFCF48;
 
   box-shadow: 2px 2px 1px 1px #333;
   padding: 0.2rem 1.4rem;
@@ -49,12 +49,16 @@ table {
   border-spacing: 0;
   min-width: 800px;
   width: 100%;
+  border: rgb(221, 218, 215) solid;
+  /* white-space: nowrap; */
 }
 
 table * {
-  border-bottom: solid 1px;
-  padding: 0.6rem;
+  border: rgb(221, 218, 215) solid;
+  padding: 0.3rem;
   text-align: center;
+  font-size: 14px;
+
 }
 
 table td:last-child {
@@ -62,30 +66,35 @@ table td:last-child {
 }
 
 table thead {
-  background-color: #c3baba;
+  background-color: #e4e1e1;
+  border: rgb(221, 218, 215) solid
 }
 
 table tbody {
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  background-color: #e4e1e1;
 }
 
-table tbody tr td:last-child {
+table tbody tr {
   border-bottom: none;
+  white-space: nowrap;
+    
 }
 
 table tbody tr td:nth-child(1) {
-  border-left: solid 1px;
+  /* border-left: solid 1px; */
+  white-space: nowrap;
 }
 
-table tbody tr td:nth-last-child(2) {
-  border-right: solid 1px;
+table tbody tr td:nth-last-child(1) {
+  /* border-right: solid 1px; */
 }
 
 .editar_btn {
   border: solid 1px #333;
   border-radius: 5px;
-  background-color: #e4ec04;
-  color: #333;
+  background-color: #2A5A63;
+  color: #ffffff;
   font-weight: bold;
   box-shadow: 2px 2px 1px 1px #333;
   cursor: pointer;
