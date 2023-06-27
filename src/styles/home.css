@@ -7,6 +7,10 @@
     margin: 16px;
 }
 
+#main_home{
+
+    display: contents;
+}
 
 #home_cabeçalho{
     padding: 15px;
@@ -21,8 +25,11 @@
 #home_habilidades_central{
     font-size: 17px;
     display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 .home_habilidades{
+    
     width: 400px;
     height: auto;
 
@@ -40,14 +47,19 @@ figure img {
     height: auto;
 }
 
-#home_icons{
-
+#home_icons {
     margin: 0 auto;
     margin-left: 110px;
     display: flex;
     align-items: center;
-    padding: 30px;
+    padding: 50px;
+   
 
+}
+
+#home_icons img{
+
+    width: 50px;
 }
 
 .home_img_pessoas{
@@ -66,12 +78,25 @@ figure img {
 
 
 #home_rodape{
-    padding: 8px;
+    padding: 10px;
     place-items: center;
     place-self: center;
     margin: 0 auto;
+    
 }
 
+.home_img_parceiros{
+    
+    padding: 16px;
+    width: 1000px;
+    height: auto;
+}
+
+.home_img_parceiros img{
+
+    width: 600px;
+    height: auto;
+}
 
 
 .home_cadastro_button button{
