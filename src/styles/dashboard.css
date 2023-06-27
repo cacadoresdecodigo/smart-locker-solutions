@@ -77,18 +77,15 @@ table tbody {
 
 table tbody tr {
   border-bottom: none;
-  white-space: nowrap;
+  /* white-space: nowrap; */
     
 }
 
 table tbody tr td:nth-child(1) {
   /* border-left: solid 1px; */
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
-table tbody tr td:nth-last-child(1) {
-  /* border-right: solid 1px; */
-}
 
 .editar_btn {
   border: solid 1px #333;
