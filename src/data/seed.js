@@ -1,11 +1,3 @@
-/*
-type Empresa = {
-    cnpj: string
-    nome: string
-    endereço: string
-}
-*/
-
 const empresas = [
   {
     cnpj: "08.613.321/0001-73",
