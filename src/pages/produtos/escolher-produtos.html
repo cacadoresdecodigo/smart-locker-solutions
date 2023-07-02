@@ -2,63 +2,61 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Escolher produtos</title>
-    <link rel="stylesheet" href="../../styles/reset.css" />
-    <link rel="stylesheet" href="../../styles/global.css" />
-    <link rel="stylesheet" href="../../styles/escolher-produtos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolher produtos</title>
+  <link rel="stylesheet" href="../../styles/reset.css" />
+  <link rel="stylesheet" href="../../styles/global.css" />
+  <link rel="stylesheet" href="../../styles/escolher-produtos.css">
 </head>
 
 <body>
-    <div id="container">
-        <header>
-            <div id="logo"><img src="../../assets/logo.png" alt="Logo"></div>
-            <nav id="main_nav">
-                <a href="../index/index.html">Home</a>
-                <a href="../produtos/produtos.html">Nossos Produtos</a>
-                <a href="../sobre/sobre.html">Quem Somos</a>
-            </nav>
-            <select id="dropdown-menu">
-              <option value="sair">Nome</option>
-              <option value="admin">Editar perfil</option>
-              <option value="sair">Sair</option>
-          </select>
-        </header>
-        <main id="content">
-            <div id="cadastro_cabecalho">
-                <div class="cadastro_cabecalho_h3"><h3>Faça seu pedido</h3></div>
-            </div>
-              <!-- formuario de cadastro  -->
-              <div class="formulario">
-                <div class="formulario_linha">
-                  <div class="formulario_campo">
-                    <label>Tamanho P</label>
-                    <input class="" type="number" min="1" max="9"/>
-                  </div>
-                  <div class="formulario_campo">
-                    <label>Tamanho M</label>
-                    <input class="" type="number" min="1" max="9" />
-                  </div>
-                  <div class="formulario_campo">
-                    <label>Tamanho G</label>
-                    <input class="" type="number" min="1" max="9" />
-                  </div>
-                </div>
-                  <div class="formulario_linha">
-                    <div class="formulario_campo">
-                    <h3>Escreva o seu pedido personalizado</h3>
-                    <label>Descreva seu pedido</label>
-                    <textarea class="inpt_descreva_pedido"> </textarea>
-                    </div>
-                  </div>
-                <div class="formulario_acoes">
-                  <button class="botao_primario">Enviar</button>                         
-                </div>
-              </div>
-        </main>
-        <footer>&copy caçadores de código 2023</footer>
-    </div>
+  <header>
+    <div id="logo"><img src="../../assets/logo1.png" alt="Logo" /></div>
+    <nav id="main_nav">
+      <a href="../index/index.html">Home</a>
+      <a href="../produtos/produtos.html">Nossos Produtos</a>
+      <a href="../sobre/sobre.html">Quem Somos</a>
+      <button class="btn_secundario">Login</button>
+      <select id="dropdown-menu">
+        <option value="sair">Nome</option>
+        <option value="admin">Editar perfil</option>
+        <option value="sair">Sair</option>
+      </select>
+    </nav>
+
+  </header>
+  <main id="content">
+    <h1 class="titulo">Faça seu pedido</h1>
+    <form class="formulario">
+      <div id="tamanhos">
+        <div class="campo">
+          <label for="tamanho_p">Tamanho P</label>
+          <input type="number" id="tamanho_p" name="tamanho p" min="1" max="9" />
+        </div>
+        <div class="campo">
+          <label for="tamanho_m">Tamanho M</label>
+          <input type="number" id="tamanho_m" name="tamanho m" min="1" max="9" />
+        </div>
+        <div class="campo">
+          <label for="tamanho_g">Tamanho g</label>
+          <input type="number" id="tamanho_g" name="tamanho g" min="1" max="9" />
+        </div>
+      </div>
+
+      <div id="detalhes">
+        <h3>Escreva o seu pedido personalizado</h3>
+        <div class="campo">
+
+          <label>Descreva seu pedido</label>
+          <textarea> </textarea>
+        </div>
+      </div>
+      <button class="btn_primario">Enviar</button>
+    </form>
+  </main>
+  <footer>&copy caçadores de código 2023</footer>
+
 
 </body>
 
