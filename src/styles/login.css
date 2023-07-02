@@ -1,104 +1,29 @@
-body {
-    margin: 0;
+header {
+  margin: 10px 0;
+  justify-content: center;
 }
 
-.login_principal{
-    width: 100vw;
-    height:100vh;
-    background: rgb(205, 204, 204);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+#main_nav {
+  display: none;
 }
 
-
-.login_esquerdo{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
+#content {
+  text-align: center;
+  gap: 2rem;
 }
 
-.login_esquerdo_imagem{
-    width: 35vw;
-
+.formulario {
+  gap: 1rem;
 }
 
-.login_direito{
-    width: 35vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card {
+  margin: 30px auto;
+  padding: 2rem;
+  width: 300px;
+  height: 100%;
 }
 
-.login{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    background: rgb(155, 151, 151);
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px #706c6c56;
-}
-
-.login{
-    color: rgb(50, 50, 50);
-    font-weight: 800;
-    margin: 0;
-}
-
-.campo_texto{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 10px 0px;
-}
-
-.campo_texto > input{
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background: rgb(130, 125, 125);
-    color: rgb(50, 50, 50);
-    font-size: 12pt;
-    box-shadow: opx 10px 40px #00000056;
-    outline: none;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-.campo_texto > label {
-    color:rgb(50, 50, 50);
-    margin-bottom: 10px;
-}
-
-.campo_texto > input::placeholder{
-    color: rgb(50, 50, 49);
-}
-
-.botao_login{
-    width: 100%;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #420f0fda;
-    background:#be3c3cda;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #930b0bda;;
-    
+a:hover {
+  color: #a8a8a8;
+  transition: ease-in 0.2s;
 }

@@ -1,36 +1,58 @@
-<!-- @format -->
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../styles/login.css">
-    <title>Login</title>
-  </head>
-  <body>
-  
-    <div class="login_principal">
-      <div class="login_esquerdo">
-        <img src="../../assets/imagem_login.png" class="login_esquerdo_imagem" alt="Smart locker solutions">
-      </div>
-      <div class="login_direito">
-        <div class="login">
-          <div class="campo_texto">
-            <h1>Seja bem vindo!</h1>
-            <label for="usuario">Usuário</label>
-            <input type="text" nome="usuario" placeholder="Email" />
-          </div>
-          <div class="campo_texto">
-            <label for="senha">Senha</label>
-            <input type="password" nome="senha" placeholder="Senha"/>
-            <a href="#" class="recuperecao_senha">Esqueceu a senha?</a>
-            
-          </div>
-          <button class="botao_login">Login</button>
-          <label for="cadastro">Não tem uma conta?<a href="#" class="cadastre-se">Cadastre-se</a></label>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - SmartLock Solutions</title>
+  <link rel="stylesheet" href="../../styles/reset.css" />
+  <link rel="stylesheet" href="../../styles/global.css" />
+  <link rel="stylesheet" href="../../styles/login.css" />
+</head>
+
+<body>
+  <header>
+    <div id="logo"><img src="../../assets/logo1.png" alt="Logo" /></div>
+    <nav id="main_nav">
+      <a href="../index/index.html">Home</a>
+      <a href="../produtos/produtos.html">Nossos Produtos</a>
+      <a href="../sobre/sobre.html">Quem Somos</a>
+      <button class="btn_secundario">Login</button>
+      <select id="dropdown-menu">
+        <option value="sair">Nome</option>
+        <option value="admin">Editar perfil</option>
+        <option value="sair">Sair</option>
+      </select>
+    </nav>
+
+  </header>
+
+  <main id="content">
+
+    <div class="card">
+      <h1 class="titulo">Seja bem vindo!</h1>
+      <form class="formulario">
+        <div class="campo">
+          <label for="usuario">Usuário</label>
+          <input type="text" id="usuario" nome="usuario" placeholder="Email" />
         </div>
-      </div>
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" nome="senha" placeholder="Senha" />
+        </div>
+        <a href="#" class="recuperecao_senha">Esqueceu a senha?</a>
+        <button class="btn_secundario">Login</button>
+        <div id="cadastro">
+          <p>Não tem conta?</p>
+          <a href="../cadastro/cadastro.html">Cadastre-se<a>
+        </div>
+      </form>
     </div>
-  </body>
+    </div>
+
+  </main>
+
+  <footer>&copy caçadores de código 2023</footer>
+</body>
+
 </html>
