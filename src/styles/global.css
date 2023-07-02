@@ -2,23 +2,16 @@
 
 body {
   font-family: "Inter", sans-serif;
-  /* background: #f7f7f7; */
-}
-
-#container {
-  width: 1024px;
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  color: #2f2e2e;
+  background: #e3e3e3;
 }
 
 /* HEADER */
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 /* LOGO */
@@ -30,37 +23,33 @@ header {
 #logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
 }
 
 /* NAV */
 #main_nav {
   display: flex;
-  box-shadow: 2px 2px 1px 1px #333;
+  align-items: center;
+  gap: 2rem;
 }
 
 #main_nav a {
-  padding: 0.2rem 1.4rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* MENU */
+
+#dropdown-menu {
+  padding: 0.4rem 2rem;
   border: solid 1px;
-  text-align: center;
-}
-
-/* LOGIN BTN */
-
-#login_btn {
-  background: #1c74d8;
-  color: #dddada;
-
-  border: solid 1px #333;
-  padding: 0.2rem 1.4rem;
-  box-shadow: 2px 2px 1px 1px #333;
-
-  text-align: center;
-}
-
-/* CONTEUDO PRINCIPAL */
-#content {
-  flex-grow: 1;
+  font-family: inherit;
+  font-size: 0.9rem;
 }
 
 /* FOOTER */
@@ -68,4 +57,118 @@ footer {
   display: flex;
   justify-content: center;
   padding: 1rem;
+  background-color: #2a5a63;
+  color: #85a338;
+}
+
+/* BUTTONS */
+.btn_primario {
+  background-color: #ffcf48;
+  padding: 1rem 3.5rem;
+  max-width: 220px;
+  border: none;
+  border-radius: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.btn_primario:hover {
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.btn_secundario {
+  background-color: #85a338;
+  padding: 1rem 3.5rem;
+  max-width: 220px;
+  border: none;
+  border-radius: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.btn_secundario:hover {
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.btn_terciario {
+  background-color: #2a5a63;
+  color: #d2d1d1;
+  padding: 1rem 3.5rem;
+  max-width: 220px;
+  border: none;
+  border-radius: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.btn_terciario:hover {
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* BUTTONS */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 8px;
+}
+
+.campo input {
+  padding: 0.6rem;
+}
+
+.campo label {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+/* ------------ CARD ------------ */
+#card_container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  width: 220px;
+  height: 284px;
+  padding: 1rem;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  gap: 1rem;
+}
+#card:hover {
+  box-shadow: 17px 20px 38px -15px rgba(0, 0, 0, 0.3);
 }
