@@ -1,81 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="../../styles/reset.css" />
-    <link rel="stylesheet" href="../../styles/global.css" />
-    <link rel="stylesheet" href="../../styles/home.css" />
-  </head>
 
-  <body>
-    <div id="container">
-      <header>
-        <div id="logo"><img src="../../assets/logo.png" alt="Logo" /></div>
-        <nav id="main_nav">
-          <a href="../index/index.html">Home</a>
-          <a href="../produtos/produtos.html">Nossos Produtos</a>
-          <a href="../sobre/sobre.html">Quem Somos</a>
-        </nav>
-        <a id="login_btn" href="../login/login.html">Login</a>
-      </header>
-      <main id="content">
-        <div id="main_home">
-          <div id="home_cabeçalho">
-            <h2>
-              Solução segura, moderna e prática para quem entrega.
-              <br />Autonomia e agilidade para quem recebe.
-            </h2>
-          </div>
-          <div id="home_info">
-            <div id="home_habilidades_central">
-              <div class="home_img">
-                <figure>
-                  <img
-                    src="../../assets/Capa.png"
-                    alt="Ilustração de boneco com caixas"
-                  />
-                </figure>
-              </div>
-              <div class="home_habilidades">
-                <p>Privacidade e comodidade</p>
-                <p>Conveniência de horários</p>
-                <p>Reduz risco de extravios</p>
-                <p>Agilidade e segurança</p>
-                <p>Entrega sem contato</p>
-                <p>Evita filas</p>
-              </div>
-            </div>
-          </div>
-          <div id="home_icons">
-            <div class="home_img_pessoas">
-              <img src="../../assets/home-users.png" alt="Icone de pessoas" />
-              <p>Personalizar com a sua marca</p>
-            </div>
-            <div class="home_img_seta">
-              <img src="../../assets/home-seta.png" alt="Icone seta" />
-              <p>Escolher o tamanho</p>
-            </div>
-            <div class="home_img_monitorar">
-              <img src="../../assets/home-monitorar.png" alt="Icone monitor" />
-              <p>Controlar e monitorar através da plataforma</p>
-            </div>
-          </div>
-          <div id="home_rodape">
-            <div class="home_text_parceiros">
-                <h3>Nossos clientes</h3>
-            </div>
-            <div class="home_img_parceiros">
-              <img src="../../assets/home-marcas.png" alt="icones parceiros"/>
-            </div>
-            <div class="home_cadastro_button">
-              <button>Cadastre-se</button>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - SmartLock Solutions</title>
+  <link rel="stylesheet" href="../../styles/reset.css" />
+  <link rel="stylesheet" href="../../styles/global.css" />
+  <link rel="stylesheet" href="../../styles/home.css" />
+</head>
+
+<body>
+  <header>
+    <div id="logo"><img src="../../assets/logo1.png" alt="Logo" /></div>
+    <nav id="main_nav">
+      <a href="../index/index.html">Home</a>
+      <a href="../produtos/produtos.html">Nossos Produtos</a>
+      <a href="../sobre/sobre.html">Quem Somos</a>
+      <button class="btn_secundario">Login</button>
+      <select id="dropdown-menu">
+        <option value="sair">Nome</option>
+        <option value="admin">Editar perfil</option>
+        <option value="sair">Sair</option>
+      </select>
+    </nav>
+  </header>
+
+  <main id="content">
+    <div id="hero">
+      <div id="titulo">
+        <h2>
+          Solução segura, moderna e prática para quem entrega.
+          Autonomia e agilidade para quem recebe.
+        </h2>
+
+        <div>
+          <p>Privacidade e comodidade</p>
+          <p>Conveniência de horários</p>
+          <p>Reduz risco de extravios</p>
+          <p>Agilidade e segurança</p>
+          <p>Entrega sem contato</p>
+          <p>Evita filas</p>
         </div>
-      </main>
-      <footer>&copy caçadores de código 2023</footer>
+
+        <button class="btn_primario">Cadastre-se</button>
+      </div>
+      <img id="icone1" src="../../assets/icons/home3.svg" alt="icone 1">
+      <img id="icone2" src="../../assets/icons/home6.svg" alt="icone 2">
     </div>
-  </body>
+
+    <div id="card_container">
+      <div class="card">
+        <img src="../../assets/home-users.png" alt="Icone de pessoas" />
+        <p>Personalizar com a sua marca</p>
+      </div>
+      <div class="card">
+        <img src="../../assets/home-seta.png" alt="Icone seta" />
+        <p>Escolher o tamanho</p>
+      </div>
+      <div class="card">
+        <img src="../../assets/home-monitorar.png" alt="Icone monitor" />
+        <p>Controlar e monitorar através da plataforma</p>
+      </div>
+    </div>
+
+    <div id="parceiros">
+      <h3>Nossos clientes</h3>
+      <img src="../../assets/home-marcas.png" alt="icones parceiros" />
+    </div>
+  </main>
+
+  <footer>&copy caçadores de código 2023</footer>
+</body>
+
 </html>
