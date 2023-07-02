@@ -7,38 +7,9 @@
 
 .dashboard-container {
   display: flex;
+  gap: 2rem;
   flex-direction: column;
-  padding: 1rem;
-}
-
-h3 {
-  margin: 0px;
-  padding: 8px;
-  font-size: 26px;
-  text-align: center;
-}
-
-#cadastro_btn {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  width: 300px;
-  height: 35px;
-
-  align-self: flex-start;
-
-  background-color: #FFCF48;
-
-  box-shadow: 2px 2px 1px 1px #333;
-  padding: 0.2rem 1.4rem;
-
-  border: solid 1px;
-
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#cadastro_btn:hover {
-  background-color: #eb6639;
+  padding: 2rem;
 }
 
 .hidden {
@@ -50,7 +21,6 @@ table {
   min-width: 800px;
   width: 100%;
   border: rgb(221, 218, 215) solid;
-  /* white-space: nowrap; */
 }
 
 table * {
@@ -58,7 +28,6 @@ table * {
   padding: 0.3rem;
   text-align: center;
   font-size: 14px;
-
 }
 
 table td:last-child {
@@ -67,42 +36,17 @@ table td:last-child {
 
 table thead {
   background-color: #e4e1e1;
-  border: rgb(221, 218, 215) solid
+  border: rgb(221, 218, 215) solid;
 }
 
 table tbody {
-  /* white-space: nowrap; */
   background-color: #e4e1e1;
 }
 
 table tbody tr {
   border-bottom: none;
-  /* white-space: nowrap; */
-    
 }
 
-table tbody tr td:nth-child(1) {
-  /* border-left: solid 1px; */
-  /* white-space: nowrap; */
-}
-
-
-.editar_btn {
-  border: solid 1px #333;
-  border-radius: 5px;
-  background-color: #2A5A63;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 2px 2px 1px 1px #333;
-  cursor: pointer;
-}
-
-.excluir_btn {
-  border: solid 1px;
-  border-radius: 5px;
-  background-color: #af1818;
-  color: #d7dce1;
-  font-weight: bold;
-  box-shadow: 2px 2px 1px 1px #333;
-  cursor: pointer;
+#produtos {
+  display: none;
 }

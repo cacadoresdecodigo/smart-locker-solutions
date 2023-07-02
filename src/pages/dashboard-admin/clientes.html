@@ -11,73 +11,123 @@
 </head>
 
 <body>
-    <div id="container">
-        <header>
-            <div id="logo"><img src="../../assets/logo.png" alt="Logo"></div>
-            <nav id="main_nav">
-                <a href="../index/index.html">Home</a>
-                <a href="../produtos/produtos.html">Nossos Produtos</a>
-                <a href="../sobre/sobre.html">Quem Somos</a>
-            </nav>
+    <header>
+        <div id="logo"><img src="../../assets/logo1.png" alt="Logo" /></div>
+        <nav id="main_nav">
+            <a href="../index/index.html">Home</a>
+            <a href="../produtos/produtos.html">Nossos Produtos</a>
+            <a href="../sobre/sobre.html">Quem Somos</a>
+            <button class="btn_secundario">Login</button>
             <select id="dropdown-menu">
-                <option value="admin">Admin</option>
-                <option value="produtos">Produtos</option>
-                <option selected value="clientes">Clientes</option>
+                <option value="sair">Nome</option>
+                <option value="admin">Editar perfil</option>
                 <option value="sair">Sair</option>
             </select>
-        </header>
-        <main id="content">
-            <div class="dashboard-container">
-                <h3>Meus Clientes</h3>
-                <button id="cadastro_btn">Cadastrar Novo Cliente</button>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Cliente</th>
-                            <th>CNPJ</th>
-                            <th>Endereço</th>
-                            <th>E-mail</th>
-                            <th>Telefone</th>
-                            <th>-</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>FLORIPA SHOPPING CENTER</td>
-                            <td>08.613.321/0001-73</td>
-                            <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
-                            <td>floripashopping@floripashopping.com</td>
-                            <td>48 999999999</td>
-                            <td>
-                                <button class="editar_btn">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>FLORIPA SHOPPING CENTER</td>
-                            <td>08.613.321/0001-73</td>
-                            <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
-                            <td>floripashopping@floripashopping.com</td>
-                            <td>48 999999999</td>
-                            <td>
-                                <button class="editar_btn">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>FLORIPA SHOPPING CENTER</td>
-                            <td>08.613.321/0001-73</td>
-                            <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
-                            <td>floripashopping@floripashopping.com</td>
-                            <td>48 999999999</td>
-                            <td>
-                                <button class="editar_btn">Editar</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </main>
-        <footer>&copy caçadores de código 2023</footer>
-    </div>
+        </nav>
+
+    </header>
+
+    <main id="content">
+        <div id="clientes" class="dashboard-container">
+            <h1 class="titulo">Meus Clientes</h1>
+            <button class="btn_primario">Cadastrar Novo Cliente</button>
+            <table id="">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>CNPJ</th>
+                        <th>Endereço</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>-</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FLORIPA SHOPPING CENTER</td>
+                        <td>08.613.321/0001-73</td>
+                        <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
+                        <td>floripashopping@floripashopping.com</td>
+                        <td>48 999999999</td>
+                        <td>
+                            <button class="btn_terciario">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FLORIPA SHOPPING CENTER</td>
+                        <td>08.613.321/0001-73</td>
+                        <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
+                        <td>floripashopping@floripashopping.com</td>
+                        <td>48 999999999</td>
+                        <td>
+                            <button class="btn_terciario">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FLORIPA SHOPPING CENTER</td>
+                        <td>08.613.321/0001-73</td>
+                        <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
+                        <td>floripashopping@floripashopping.com</td>
+                        <td>48 999999999</td>
+                        <td>
+                            <button class="btn_terciario">Editar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="produtos" class="dashboard-container">
+            <h1>Meus Produtos</h1>
+            <button class="btn_primario">Cadastrar Novo Produto</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cód</th>
+                        <th>Dimensões</th>
+                        <th>-</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Locker Tamanho P</td>
+                        <td>102</td>
+                        <td>20 x 20 x 150</td>
+                        <td>
+                            <button class="btn_terciario">Editar</button>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Locker Tamanho M</td>
+                        <td>122</td>
+                        <td>60 x 60 x 150</td>
+                        <td>
+                            <button class="btn_terciario">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Locker Tamanho G</td>
+                        <td>132</td>
+                        <td>120 x 120 x 150</td>
+                        <td>
+                            <button class="btn_terciario">Editar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <dialog id="modal_editar_clientes">
+
+        </dialog>
+
+        <dialog id="modal_editar_produtos">
+
+        </dialog>
+    </main>
+    <footer>&copy caçadores de código 2023</footer>
 </body>
 
 </html>
