@@ -5,14 +5,11 @@
   font-size: 0.9rem;
 }
 
-
 #content {
-  display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
   text-align: center;
   align-items: center;
-  margin: 16px;
+  margin: 76px 16px;
 }
 
 #cadastro_cabecalho {
@@ -33,39 +30,22 @@
   max-width: 300px;
 }
 
-.formulario {
-  display: flex;
-  flex-direction: column;
+form {
   min-width: 400px;
   max-width: 600px;
 }
 
 .formulario_linha {
   display: flex;
-}
-
-.formulario_campo {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  text-align: left;
-  padding: 8px;
-}
-
-.formulario_campo input {
-  padding: 8px;
-}
-
-.formulario_campo label {
-  font-size: 14px;
-  margin-bottom: 4px;
+  width: 100%;
 }
 
 .formulario_acoes {
   display: flex;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 32px;
   padding: 4px;
+  gap: 1rem;
 }
 
 .formulario_acoes p {
@@ -73,55 +53,7 @@
   width: 260px;
 }
 
-.botao_secundario {
-  background-color: #f57575da;
-  color: #000000;
-  padding: 14px 24px;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  text-align: center;
-  margin: 4px;
-}
-
-.botao_terciario {
-  background-color: #f57575da;
-  color: #000000;
-  padding: 14px 24px;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  text-align: center;
-  margin: 4px;
-}
-
-.botao_quartenario {
-  background-color: #f57575da;
-  color: #000000;
-  padding: 14px 24px;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  text-align: center;
-  margin: 4px;
-}
-
-.botao_secundario:hover {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-}
-.botao_terciario:hover {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-}
-
-.botao_quartenario:hover {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+.warning {
+  background-color: #dd0000;
+  color: #ffffff;
 }
