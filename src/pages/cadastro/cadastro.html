@@ -1,82 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="../../styles/reset.css" />
-    <link rel="stylesheet" href="../../styles/global.css" />
-    <link rel="stylesheet" href="../../styles/cadastro.css" />
-  </head>
 
-  <body>
-    <div id="container">
-      <header>
-        <div id="logo"><img src="../../assets/logo.png" alt="Logo" /></div>
-        <nav id="main_nav">
-          <a href="../index/index.html">Home</a>
-          <a href="../produtos/produtos.html">Nossos Produtos</a>
-          <a href="../sobre/sobre.html">Quem Somos</a>
-        </nav>
-        <a id="login_btn" href="../login/login.html">Login</a>
-      </header>
-      <main id="content">
-        <div id="cadastro_cabecalho">
-          <div class="cadastro_cabecalho_h3"><h3>Crie seu cadastro</h3></div>
-          <div class="cadastro_cabecalho_p">
-            <p>
-              Para ser cliente é necessário preencher corretamente o formulário abaixo com os respectivos dados
-              cadastrais.
-            </p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="../../styles/reset.css" />
+  <link rel="stylesheet" href="../../styles/global.css" />
+  <link rel="stylesheet" href="../../styles/cadastro.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <div id="logo"><img src="../../assets/logo1.png" alt="Logo" /></div>
+      <nav id="main_nav">
+        <a href="../index/index.html">Home</a>
+        <a href="../produtos/produtos.html">Nossos Produtos</a>
+        <a href="../sobre/sobre.html">Quem Somos</a>
+        <button class="btn_secundario">Login</button>
+        <select id="dropdown-menu">
+          <option value="sair">Nome</option>
+          <option value="admin">Editar perfil</option>
+          <option value="sair">Sair</option>
+        </select>
+      </nav>
+
+    </header>
+    <main id="content">
+      <div id="cadastro_cabecalho">
+        <div class="cadastro_cabecalho_h3">
+          <h3>Crie seu cadastro</h3>
         </div>
-        <!-- formuario de cadastro  -->
-        <div class="formulario">
-          <div class="formulario_linha">
-            <div class="formulario_campo">
-              <label>Razão social</label>
-              <input class="" />
-            </div>
-            <div class="formulario_campo">
-              <label>Nome fantasia</label>
-              <input class="" />
-            </div>
+        <div class="cadastro_cabecalho_p">
+          <p>
+            Para ser cliente é necessário preencher corretamente o formulário abaixo com os respectivos dados
+            cadastrais.
+          </p>
+        </div>
+      </div>
+      <!-- formuario de cadastro  -->
+      <form class="formulario">
+        <div class="linha">
+          <div class="campo">
+            <label>Razão social</label>
+            <input type="text" />
           </div>
-          <div class="formulario_linha">
-            <div class="formulario_campo">
-              <label>CNPJ</label>
-              <input class="" />
-            </div>
-            <div class="formulario_campo">
-              <label>Telefone</label>
-              <input class="" />
-            </div>
-          </div>
-          <div class="formulario_linha">
-            <div class="formulario_campo">
-              <label>E-mail</label>
-              <input type="" class="" />
-            </div>
-          </div>
-          <div class="formulario_linha">
-            <div class="formulario_campo">
-              <label>Senha</label>
-              <input type="password" class="" />
-            </div>
-          </div>
-          <div class="formulario_acoes">
-            <button class="botao_primario">Cadastre-se</button>
-            <p>
-              Ao preencher o formulário a cima você concorda com todos os nossos Termos de Uso e nossa Política de
-              Privacidade.
-            </p>
+
+          <div class="campo">
+            <label>Nome fantasia</label>
+            <input type="text" />
           </div>
         </div>
 
 
-        <!-- </div> -->
-      </main>
-      <footer>&copy caçadores de código 2023</footer>
-    </div>
-  </body>
+        <div class="linha">
+          <div class="campo">
+            <label>CNPJ</label>
+            <input type="text" />
+          </div>
+
+          <div class="campo">
+            <label>Telefone</label>
+            <input type="text" />
+          </div>
+        </div>
+
+
+        <div class="campo">
+          <label>E-mail</label>
+          <input type="email" />
+        </div>
+
+        <div class="campo">
+          <label>Senha</label>
+          <input type="password" />
+        </div>
+
+        <div class="formulario_acoes">
+          <button class="btn_primario">Cadastre-se</button>
+          <p>
+            Ao preencher o formulário a cima você concorda com todos os nossos Termos de Uso e nossa Política de
+            Privacidade.
+          </p>
+        </div>
+      </form>
+
+
+      <!-- </div> -->
+    </main>
+    <footer>&copy caçadores de código 2023</footer>
+  </div>
+</body>
+
 </html>

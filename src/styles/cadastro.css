@@ -1,5 +1,3 @@
-
-
 #content {
   display: flex;
   flex-direction: column;
@@ -14,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   padding: 8px;
-  margin: 8px 16px;
+  margin: 40px 16px;
 }
 
 .cadastro_cabecalho_h3 {
@@ -27,35 +25,17 @@
   max-width: 300px;
 }
 
-.formulario {
+form {
+  max-width: 480px;
+  margin-bottom: 20px;
+}
+.linha {
   display: flex;
-  flex-direction: column;
-  min-width: 400px;
-  max-width: 600px;
-}
-
-.formulario_linha {
-  display: flex;
-}
-
-.formulario_campo {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  text-align: left;
-  padding: 8px;
-}
-
-.formulario_campo input {
-  padding: 8px;
-}
-
-.formulario_campo label {
-  font-size: 14px;
-  margin-bottom: 4px;
+  width: 100%;
 }
 
 .formulario_acoes {
+  margin: 50px 0;
   display: flex;
   align-items: center;
   padding: 8px;
@@ -64,21 +44,4 @@
 .formulario_acoes p {
   font-size: 13px;
   width: 260px;
-}
-
-.botao_primario {
-  background-color: #f57575da;
-  color: #000000;
-  padding: 16px 24px;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.botao_primario:hover {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
