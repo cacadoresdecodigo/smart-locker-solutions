@@ -119,12 +119,67 @@
             </table>
         </div>
 
-        <dialog id="modal_editar_clientes">
+        <dialog id="editar_clientes" class="modal">
+            <h1 id="titulo">Editar cliente</h1>
+            <form>
+                <div class="linha">
+                    <div class="campo">
+                        <label>Razão social</label>
+                        <input type="text" />
+                    </div>
+                    <div class="campo">
+                        <label>Nome fantasia</label>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <label>CNPJ</label>
+                        <input type="text" />
+                    </div>
+                    <div class="campo">
+                        <label>Telefone</label>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <label>E-mail</label>
+                        <input type="email" />
+                    </div>
+                </div>
 
+                <div class="acoes">
+                    <button class="btn_primario">Salvar</button>
+                    <button class="btn_terciario">Excluir</button>
+                </div>
+            </form>
         </dialog>
 
-        <dialog id="modal_editar_produtos">
+        <dialog id="editar_produtos" class="modal">
+            <h1 id="titulo">Editar produto</h1>
+            <form>
+                <div class="linha">
+                    <div class="campo">
+                        <label>Código: </label>
+                        <input type="text" />
+                    </div>
+                    <div class="campo">
+                        <label>Nome: </label>
+                        <input type="text" />
+                    </div>
+                </div>
 
+                <div class="campo">
+                    <label>Dimensões</label>
+                    <input type="text" />
+                </div>
+
+                <div class="acoes">
+                    <button class="btn_primario">Salvar</button>
+                    <button class="btn_terciario">Excluir</button>
+                </div>
+            </form>
         </dialog>
     </main>
     <footer>&copy caçadores de código 2023</footer>

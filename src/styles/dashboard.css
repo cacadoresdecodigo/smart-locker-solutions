@@ -50,3 +50,42 @@ table tbody tr {
 #produtos {
   display: none;
 }
+
+/*------------- MODAL ------------- */
+.modal {
+  margin: auto auto;
+  padding: 4rem;
+}
+
+#titulo {
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: 50px auto;
+  gap: 1rem;
+}
+
+.acoes {
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+.acoes p {
+  font-size: 13px;
+  width: 260px;
+}
+
+.inpt_descreva_pedido {
+  height: 150px;
+  line-height: normal;
+}
+.btn_terciario {
+  background-color: red;
+  color: black;
+}
