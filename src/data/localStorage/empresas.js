@@ -6,7 +6,7 @@ let Empresa = {
 }
 */
 
-// Retorna um array de empresas sincranizado com o local storage.
+// Retorna um array de empresas sincronizado com o local storage.
 // Se não existir uma chave "empresas" no local storage retorna um aray vazio.
 function sync() {
   const dadosEmpresas = localStorage.getItem("empresas");
