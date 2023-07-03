@@ -6,11 +6,6 @@
   align-items: center;
 }
 
-#titulo {
-  font-size: 2rem;
-  max-width: 700px;
-}
-
 #locker_image {
   margin: -80px 0;
   width: 90%;

@@ -31,8 +31,6 @@ header {
 }
 
 #content {
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
 }
 
@@ -132,6 +130,11 @@ form {
   height: 100%;
 }
 
+.linha {
+  display: flex;
+  width: 100%;
+}
+
 .campo {
   display: flex;
   flex-direction: column;
@@ -180,4 +183,15 @@ form {
 
 #card:hover {
   box-shadow: 17px 20px 38px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------ TITULOS ------------ */
+
+#titulo {
+  font-size: 2rem;
+  max-width: 700px;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
 }

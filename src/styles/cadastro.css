@@ -29,10 +29,6 @@ form {
   max-width: 480px;
   margin-bottom: 20px;
 }
-.linha {
-  display: flex;
-  width: 100%;
-}
 
 .formulario_acoes {
   margin: 50px 0;
