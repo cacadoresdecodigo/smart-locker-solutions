@@ -30,12 +30,6 @@ header {
   object-fit: cover;
 }
 
-#content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 /* NAV */
 #main_nav {
   display: flex;
@@ -56,6 +50,13 @@ header {
   border: solid 1px;
   font-family: inherit;
   font-size: 0.9rem;
+}
+
+/* MAIN */
+#content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* FOOTER */
