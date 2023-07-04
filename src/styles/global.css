@@ -20,7 +20,7 @@ header {
 
 /* LOGO */
 #logo {
-  width: 220px;
+  width: 350px;
   height: 120px;
 }
 
@@ -64,15 +64,15 @@ footer {
   display: flex;
   justify-content: center;
   padding: 1rem;
-  background-color: #2a5a63;
-  color: #85a338;
+  color: #2A5A63;
 }
 
 /* BUTTONS */
 .btn_primario {
-  background-color: #ffcf48;
-  padding: 1rem 3.5rem;
-  max-width: 220px;
+  background-color: #85A338;
+  color: #fff;
+  padding: 0.7rem 3.5rem;
+  max-width: 190px;
   border: none;
   border-radius: 15px;
   font-weight: 700;
@@ -88,9 +88,9 @@ footer {
 }
 
 .btn_secundario {
-  background-color: #85a338;
-  padding: 1rem 3.5rem;
-  max-width: 220px;
+  background-color: #FFCF48;
+  padding: 0.7rem 3.5rem;
+  max-width: 190px;
   border: none;
   border-radius: 15px;
   font-weight: 700;
@@ -106,14 +106,13 @@ footer {
 }
 
 .btn_terciario {
-  background-color: #2a5a63;
-  color: #d2d1d1;
-  padding: 1rem 3.5rem;
-  max-width: 220px;
+  background-color: #2A5A63;
+  color: #fff;
+  padding: 0.7rem 3.5rem;
+  max-width: 208px;
   border: none;
   border-radius: 15px;
   font-weight: 700;
-
   cursor: pointer;
 }
 
@@ -122,6 +121,17 @@ footer {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.btn_quartenario {
+  background-color: #ab1d1d;
+  color: #fff;
+  padding: 0.7rem 3.5rem;
+  max-width: 200px;
+  border: none;
+  border-radius: 15px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 /* FORM */
