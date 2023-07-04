@@ -15,7 +15,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1.2rem 4rem;
 }
 
 /* LOGO */
@@ -173,8 +173,10 @@ form {
 
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 100px;
+  margin-top: 250px;
 }
 
 .card {

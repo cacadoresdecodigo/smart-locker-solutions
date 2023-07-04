@@ -55,6 +55,13 @@ table tbody tr {
 .modal {
   margin: auto auto;
   padding: 4rem;
+  background: #e3e3e3;
+}
+
+dialog::backdrop {
+  position: fixed;
+  inset: 0px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #titulo {

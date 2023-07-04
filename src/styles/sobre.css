@@ -1,53 +1,68 @@
-#foto_armario {
-  width: 100vw;
-  height: 50vh;
-  box-shadow: 0px 7px 5px 0 rgba(0, 0, 0, 0.4);
+#hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-#foto_armario img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#icone6 {
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+#icone7 {
+  max-width: 300px;
+}
+
+#icone8 {
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.btn_secundario {
+  padding: 0.8rem 3.5rem;
+  font-size: 16px;
+  max-width: 190px;
 }
 
 #container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.missao_visao_valores {
-  padding: 1rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.titulo,
-.subtitulo {
-  margin: 10px 0;
-}
-
-p {
-  font-size: larger;
-}
-
-.artigo {
-  width: 800px;
-  margin: 40px 20px;
-  padding: 1rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .quemsomos {
   width: 800px;
-  flex-grow: 1;
+  margin: 30px;
+  font-size: larger;
 }
 
-.missao,
+
+.missao {
+  width: 800px;
+  margin: 30px;
+  font-size: larger;
+}
+
+
 .visao {
-  width: 400px;
+  width: 800px;
+  margin: 30px;
+  font-size: larger;
 }
 
 .valores {
-  width: 200px;
+  width: 800px;
+  margin: 30px;
+  font-size: larger;
 }
+
+.subtitulo{
+  font-size: 25px;
+}
+
+
+

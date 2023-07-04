@@ -68,7 +68,7 @@
   grid-column-end: 17;
   grid-row-start: 5;
   grid-row-end: 8;
-  /* margin-top: -40px; */
+  /* margin-top: -70px; */
 }
 
 /* ------------ PARCEIROS ------------ */
@@ -127,4 +127,19 @@
 
 #card:hover {
   box-shadow: 17px 20px 38px -15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ------------ BUTTONS ------------ */
+
+.btn_primario {
+  padding: 0.8rem 3.5rem;
+  font-size: 16px;
+  max-width: 205px;
+}
+
+.btn_secundario {
+  padding: 0.8rem 3.5rem;
+  font-size: 16px;
+  max-width: 190px;
 }
