@@ -85,7 +85,11 @@ form {
   height: 150px;
   line-height: normal;
 }
+
 .btn_terciario {
-  background-color: red;
-  color: black;
+  padding: 0.7rem 1.2rem;
+}
+
+.btn_primario {
+  padding: 0.9rem 1.2rem;
 }
