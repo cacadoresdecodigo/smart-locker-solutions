@@ -1,29 +1,183 @@
-header {
-  margin: 10px 0;
-  justify-content: center;
-}
-
-#main_nav {
-  display: none;
+body {
+  margin: 0;
+  font-family: in;
 }
 
 #content {
-  text-align: center;
-  gap: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(205, 204, 204);
 }
 
-.formulario {
-  gap: 1rem;
+.botao_home_login{
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 690px;
+  
+  background: rgb(205, 204, 204);
+  
 }
 
-.card {
-  margin: 30px auto;
-  padding: 2rem;
-  width: 300px;
-  height: 100%;
+.btn_home_login{
+  background-color: #2A5A63;
+  color: #fff;
+  padding: 0.7rem 3.5rem;
+  max-width: 190px;
+  border: none;
+  border-radius: 15px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-a:hover {
-  color: #a8a8a8;
-  transition: ease-in 0.2s;
+a{
+    color: rgb(50, 50, 50); 
+    text-decoration: underline;
+    margin-top: 6px;
+}
+
+img {
+  width: 70%;
+  height: 70%;
+  margin-bottom: 20px;
+}
+
+.login_principal {
+  width: 100vw;
+  height: 80vh;
+  background: rgb(205, 204, 204);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_conteudo {
+  display: flex;
+  border-radius: 20px;
+}
+
+.login {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background: rgb(173, 169, 169);
+
+  box-shadow: 0px 10px 40px #706c6c56;
+  color: rgb(50, 50, 50);
+  font-weight: 800;
+  margin: 0;
+}
+
+.campo_texto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.login_h1 {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.campo_texto > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #f7f7f7;
+  color: rgb(50, 50, 50);
+  font-size: 12pt;
+  box-shadow: opx 10px 40px #00000056;
+  outline: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.campo_texto > label {
+  color: rgb(50, 50, 50);
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.campo_texto > input::placeholder {
+  color: rgb(50, 50, 49);
+}
+
+.btn_secundario {
+  background-color: #ffcf48;
+  width: 60%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.btn_secundario:hover {
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.login_texto {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background: #f7f7f7;
+  box-shadow: 0px 10px 40px #706c6c56;
+  color: rgb(50, 50, 50);
+  font-weight: 800;
+  margin: 0;
+}
+
+.login_h3 {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+  }
+
+.btn_primario {
+  background-color: #85a338;
+  color: rgb(50, 50, 50);
+  width: 60%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+}
+
+.btn_primario:hover {
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+footer {
+  background: rgb(205, 204, 204);
 }
