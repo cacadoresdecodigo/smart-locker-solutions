@@ -1,102 +1,90 @@
-#dropdown-menu {
-  padding: 0.4rem 2rem;
-  border: solid 1px;
-  font-family: inherit;
-  font-size: 0.9rem;
-}
-
 .dashboard-container {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  padding: 2rem;
+
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    padding: 4rem;
 }
 
-.hidden {
-  display: none;
-}
 
 table {
-  border-spacing: 0;
-  min-width: 800px;
-  width: 100%;
-  border: rgb(221, 218, 215) solid;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    padding: 6px;
+    margin: 0;
+    text-align: center;
 }
 
-table * {
-  border: rgb(221, 218, 215) solid;
-  padding: 0.3rem;
-  text-align: center;
-  font-size: 14px;
+tr * {
+    padding: 6px;
 }
 
-table td:last-child {
-  text-align: left;
+tbody tr:hover {
+    color: rgb(154, 154, 154);
+    cursor: pointer;
 }
 
-table thead {
-  background-color: #e4e1e1;
-  border: rgb(221, 218, 215) solid;
+th {
+    border-radius: 12px;
 }
 
-table tbody {
-  background-color: #e4e1e1;
+.tabela_header {
+
+    background: #FFCF48;
+    color: #333
 }
 
-table tbody tr {
-  border-bottom: none;
-}
-
-#produtos {
-  display: none;
+#tabela_produto {
+    width: 900px;
+    margin: 0 auto;
 }
 
 /*------------- MODAL ------------- */
 .modal {
-  margin: auto auto;
-  padding: 4rem;
-  background: #e3e3e3;
+    margin: auto auto;
+    padding: 4rem;
+    background: #e3e3e3;
 }
 
 dialog::backdrop {
-  position: fixed;
-  inset: 0px;
-  background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 #titulo {
-  text-align: center;
+    text-align: center;
 }
 
 form {
-  max-width: 500px;
-  margin: 50px auto;
-  gap: 1rem;
+    max-width: 500px;
+    margin: 50px auto;
+    gap: 1rem;
 }
 
 .acoes {
-  margin-top: 2rem;
+    margin-top: 2rem;
 
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  justify-content: space-around;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-around;
 }
 
 .acoes p {
-  font-size: 13px;
-  width: 260px;
+    font-size: 13px;
+    width: 260px;
 }
 
 .inpt_descreva_pedido {
-  height: 150px;
-  line-height: normal;
+    height: 150px;
+    line-height: normal;
 }
 
 .btn_terciario {
-  padding: 0.7rem 1.2rem;
+    padding: 0.7rem 1.2rem;
 }
 
 .btn_primario {
-  padding: 0.9rem 1.2rem;
+    padding: 0.9rem 1.2rem;
 }
