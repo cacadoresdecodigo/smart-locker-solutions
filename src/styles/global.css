@@ -173,6 +173,7 @@ form {
 .campo input {
     padding: 0.6rem;
     width: 100%;
+    border-radius: 14px;
 }
 
 .campo label {
