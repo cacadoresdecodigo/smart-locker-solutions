@@ -40,16 +40,16 @@
         </div>
       </div>
       <!-- formuario de cadastro  -->
-      <form class="formulario">
+      <div class="formulario">
         <div class="linha">
           <div class="campo">
             <label>Razão social</label>
-            <input type="text" />
+            <input id="inpt_razaosocial" type="text" />
           </div>
 
           <div class="campo">
             <label>Nome fantasia</label>
-            <input type="text" />
+            <input id="inpt_nomefantasia" type="text" />
           </div>
         </div>
 
@@ -57,40 +57,41 @@
         <div class="linha">
           <div class="campo">
             <label>CNPJ</label>
-            <input type="text" />
+            <input id="inpt_cnpj" type="text" />
           </div>
 
           <div class="campo">
             <label>Telefone</label>
-            <input type="text" />
+            <input id="inpt_telefone" type="text" />
           </div>
         </div>
 
 
         <div class="campo">
           <label>E-mail</label>
-          <input type="email" />
+          <input id="inpt_email" type="email" />
         </div>
 
         <div class="campo">
           <label>Senha</label>
-          <input type="password" />
+          <input id="inpt_senha" type="password" />
         </div>
 
         <div class="formulario_acoes">
-          <button class="btn_primario">Cadastre-se</button>
+          <button id="submit_btn" class="btn_primario" onclick="cadastrar()">Cadastre-se</button>
           <p>
             Ao preencher o formulário a cima você concorda com todos os nossos Termos de Uso e nossa Política de
             Privacidade.
           </p>
         </div>
-      </form>
+      </div>
 
 
       <!-- </div> -->
     </main>
     <footer>&copy caçadores de código 2023</footer>
   </div>
+  <script src="../../features/cadastrarUsuario.js"></script>
 </body>
 
 </html>
