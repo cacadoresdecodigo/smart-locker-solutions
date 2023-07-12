@@ -17,13 +17,13 @@
             <a href="./index.html">Home</a>
             <a href="./produtos.html">Nossos Produtos</a>
             <a href="./sobre.html">Quem Somos</a>
-            <button class="btn_secundario">Login</button>
-            <select id="dropdown-menu">
-                <option value="sair">Nome</option>
-                <option value="admin">Clientes</option>
-                <option value="admin">Produtos</option>
-                <option value="sair">Sair</option>
-            </select>
+
+            <a id="btn_login" href="./login.html" class="btn_secundario">Login</a>
+            <button id="dropdown-menu">
+                <img id="dropdown-menu-image" src="../assets/menu.svg" alt="drop down menu" width="30px">
+            </button>
+
+
         </nav>
 
     </header>
@@ -31,16 +31,14 @@
     <main id="content">
         <div id="clientes" class="dashboard-container">
             <h1 class="titulo">Meus Clientes</h1>
-            <button class="btn_primario">Cadastrar Novo Cliente</button>
-            <table id="">
-                <thead>
+            <table id="tabela_clientes">
+                <thead class="tabela_header">
                     <tr>
-                        <th>Cliente</th>
+                        <th>Nome Fantasia</th>
                         <th>CNPJ</th>
                         <th>Endereço</th>
                         <th>E-mail</th>
                         <th>Telefone</th>
-                        <th>-</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,9 +48,7 @@
                         <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
                         <td>floripashopping@floripashopping.com</td>
                         <td>48 999999999</td>
-                        <td>
-                            <button class="btn_terciario">Editar</button>
-                        </td>
+
                     </tr>
                     <tr>
                         <td>FLORIPA SHOPPING CENTER</td>
@@ -60,9 +56,8 @@
                         <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
                         <td>floripashopping@floripashopping.com</td>
                         <td>48 999999999</td>
-                        <td>
-                            <button class="btn_terciario">Editar</button>
-                        </td>
+
+
                     </tr>
                     <tr>
                         <td>FLORIPA SHOPPING CENTER</td>
@@ -70,9 +65,7 @@
                         <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
                         <td>floripashopping@floripashopping.com</td>
                         <td>48 999999999</td>
-                        <td>
-                            <button class="btn_terciario">Editar</button>
-                        </td>
+
                     </tr>
                 </tbody>
             </table>
@@ -81,42 +74,33 @@
         <div id="produtos" class="dashboard-container">
             <h1>Meus Produtos</h1>
             <button class="btn_primario">Cadastrar Novo Produto</button>
-            <table>
-                <thead>
+            <table id="tabela_produto">
+                <thead class="tabela_header">
                     <tr>
-                        <th>Nome</th>
                         <th>Cód</th>
+                        <th>Tamanho</th>
                         <th>Dimensões</th>
-                        <th>-</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody">
+                    </tbody>
                     <tr>
-                        <td>Locker Tamanho P</td>
                         <td>102</td>
+                        <td>Locker P</td>
                         <td>20 x 20 x 150</td>
-                        <td>
-                            <button class="btn_terciario">Editar</button>
-                        </td>
 
                     </tr>
                     <tr>
-                        <td>Locker Tamanho M</td>
                         <td>122</td>
+                        <td>Locker Tamanho M</td>
                         <td>60 x 60 x 150</td>
-                        <td>
-                            <button class="btn_terciario">Editar</button>
-                        </td>
                     </tr>
                     <tr>
-                        <td>Locker Tamanho G</td>
                         <td>132</td>
+                        <td>Locker Tamanho G</td>
                         <td>120 x 120 x 150</td>
-                        <td>
-                            <button class="btn_terciario">Editar</button>
-                        </td>
                     </tr>
-                </tbody>
+                    </tbody>
             </table>
         </div>
 
@@ -184,7 +168,18 @@
                 </div>
             </form>
         </dialog>
+
+        <dialog id="menu-modal">
+            <div id="menu-active">
+                <div class="menu-item">Admin</div>
+                <div class="menu-item">Clientes</div>
+                <div class="menu-item"> Produtos</div>
+                <div class="menu-item"> Sair</div>
+            </div>
+        </dialog>
     </main>
+
+
     <footer>&copy caçadores de código 2023</footer>
 </body>
 

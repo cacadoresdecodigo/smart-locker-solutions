@@ -18,12 +18,9 @@
                 <a href="./index.html">Home</a>
                 <a href="./produtos.html">Nossos Produtos</a>
                 <a href="./sobre.html">Quem Somos</a>
-                <button class="btn_secundario">Login</button>
-                <select id="dropdown-menu">
-                    <option value="sair">Nome</option>
-                    <option value="admin">Editar perfil</option>
-                    <option value="sair">Sair</option>
-                </select>
+
+                <a id="btn_login" href="./login.html" class="btn_secundario">Login</a>
+                <div id="login_menu"></div>
             </nav>
 
         </header>
@@ -47,14 +44,11 @@
                         <label for="razaosocial">Razão social</label>
                         <input required id="razaosocial" type="text" />
                     </div>
-
                     <div class="campo">
                         <label for="nomefantasia">Nome fantasia</label>
                         <input required id="nomefantasia" type="text" />
                     </div>
                 </div>
-
-
                 <div class="linha">
                     <div class="campo">
                         <label for="cnpj">CNPJ</label>
@@ -66,18 +60,14 @@
                         <input required id="telefone" type="text" />
                     </div>
                 </div>
-
-
                 <div class="campo">
                     <label for="email">E-mail</label>
                     <input required id="email" type="email" />
                 </div>
-
                 <div class="campo">
                     <label for="senha">Senha</label>
                     <input required id="senha" type="password" />
                 </div>
-
                 <div class="formulario_acoes">
                     <button id="submit_btn" class="btn_primario">Cadastre-se</button>
                     <p>
@@ -87,13 +77,11 @@
                     </p>
                 </div>
             </form>
-
-
             <!-- </div> -->
         </main>
         <footer>&copy caçadores de código 2023</footer>
+        <script type="module" src="../script/pages/cadastro.js"></script>
     </div>
-    <script type="module" src="./../features/cadastrarUsuario.js"></script>
 </body>
 
 </html>
