@@ -28,15 +28,15 @@
                         <div class="login_h1">
                             <h1>Login</h1>
                         </div>
-                        <label for="usuario">Usuário</label>
-                        <input type="text" id="inputEmail"  nome = "usuario" placeholder="Email" />
+                        <label for="inputEmail">Usuário</label>
+                        <input required type="text" id="inputEmail" nome="usuario" placeholder="Email" />
                     </div>
                     <div class="campo_texto">
-                        <label for="senha">Senha</label>
-                        <input type="password" id="inputSenha" nome="senha" placeholder="Senha" />
+                        <label for="inputSenha">Senha</label>
+                        <input required type="password" id="inputSenha" nome="senha" placeholder="Senha" />
                         <a href="#" class="recuperecao_senha">Esqueceu a senha?</a>
                     </div>
-                    <button class="btn_secundario" id="submit_login"  onclick="Logar()">Login</button>
+                    <button class="btn_secundario" id="submit_login">Login</button>
                 </div>
 
                 <div class="login_texto">
@@ -47,7 +47,7 @@
                     <button class="btn_primario" onclick="window.location.href = './cadastro.html'">Cadastre-se</button>
                 </div>
     </main>
-    <script src="../script/login.js"></script>
+    <script type="module" src="../script/login.js"></script>
     <footer>&copy caçadores de código 2023</footer>
 </body>
 
