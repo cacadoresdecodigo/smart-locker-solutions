@@ -1,5 +1,5 @@
 import { pegarDadosForm } from "../pegarDadosForm.js";
-import { cadastrarEmpresa } from "../cadastrarUsuario.js";
+import { cadastrarEmpresa } from "../cadastrarEmpresa.js";
 
 const form = document.getElementById("form_cadastro");
 

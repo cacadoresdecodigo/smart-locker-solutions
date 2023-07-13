@@ -1,9 +1,13 @@
 .dashboard-container {
-
     display: flex;
     gap: 2rem;
     flex-direction: column;
     padding: 4rem;
+}
+
+#container_clientes {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -34,7 +38,7 @@ th {
     color: #333
 }
 
-#tabela_produto {
+#tabela_produtos {
     width: 900px;
     margin: 0 auto;
 }
@@ -44,6 +48,8 @@ th {
     margin: auto auto;
     padding: 4rem;
     background: #e3e3e3;
+    border: transparent;
+    border-radius: 12px;
 }
 
 dialog::backdrop {
@@ -60,6 +66,10 @@ form {
     max-width: 500px;
     margin: 50px auto;
     gap: 1rem;
+}
+
+.campo {
+    width: 450px;
 }
 
 .acoes {

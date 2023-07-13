@@ -16,9 +16,9 @@ function create(produtos, produto) {
   produtos.push(produto);
 }
 
-function select(cod, produtos) {
+function select(codigo, produtos) {
   for (let i = 0; i < produtos.length; i++) {
-    if (produtos[i].cod === cod) {
+    if (produtos[i].codigo === codigo) {
       return produtos[i];
     }
   }
@@ -26,15 +26,15 @@ function select(cod, produtos) {
 
 function update(produtos, produtoAtualizado) {
   for (let i = 0; i < produtos.length; i++) {
-    if (produtos[i].cod === produtoAtualizado.cod) {
+    if (produtos[i].codigo === produtoAtualizado.codigo) {
       produtos[i] = produtoAtualizado;
     }
   }
 }
 
-function remove(cod, produtos) {
+function remove(codigo, produtos) {
   for (let i = 0; i < produtos.length; i++) {
-    if (produtos[i].cod === cod) {
+    if (produtos[i].codigo === codigo) {
       produtos.splice(index, 1);
     }
   }

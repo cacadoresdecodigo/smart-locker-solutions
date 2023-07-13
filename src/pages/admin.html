@@ -33,156 +33,28 @@
     <main id="content">
         <div id="clientes" class="dashboard-container">
             <h1 class="titulo">Meus Clientes</h1>
-            <table id="tabela_clientes">
-                <thead class="tabela_header">
-                    <tr>
-                        <th>Nome Fantasia</th>
-                        <th>CNPJ</th>
-                        <th>Endereço</th>
-                        <th>E-mail</th>
-                        <th>Telefone</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>FLORIPA SHOPPING CENTER</td>
-                        <td>08.613.321/0001-73</td>
-                        <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
-                        <td>floripashopping@floripashopping.com</td>
-                        <td>48 999999999</td>
+            <div id="container_clientes">
+            </div>
 
-                    </tr>
-                    <tr>
-                        <td>FLORIPA SHOPPING CENTER</td>
-                        <td>08.613.321/0001-73</td>
-                        <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
-                        <td>floripashopping@floripashopping.com</td>
-                        <td>48 999999999</td>
-
-
-                    </tr>
-                    <tr>
-                        <td>FLORIPA SHOPPING CENTER</td>
-                        <td>08.613.321/0001-73</td>
-                        <td>ROD VIRGILIO VARZEA, 587, AREA 2</td>
-                        <td>floripashopping@floripashopping.com</td>
-                        <td>48 999999999</td>
-
-                    </tr>
-                </tbody>
-            </table>
         </div>
 
         <div id="produtos" class="dashboard-container">
             <h1>Meus Produtos</h1>
             <button class="btn_primario">Cadastrar Novo Produto</button>
-            <table id="tabela_produto">
-                <thead class="tabela_header">
-                    <tr>
-                        <th>Cód</th>
-                        <th>Tamanho</th>
-                        <th>Dimensões</th>
-                    </tr>
-                </thead>
-                <tbody">
-                    </tbody>
-                    <tr>
-                        <td>102</td>
-                        <td>Locker P</td>
-                        <td>20 x 20 x 150</td>
+            <div id="container_produtos">
+            </div>
 
-                    </tr>
-                    <tr>
-                        <td>122</td>
-                        <td>Locker Tamanho M</td>
-                        <td>60 x 60 x 150</td>
-                    </tr>
-                    <tr>
-                        <td>132</td>
-                        <td>Locker Tamanho G</td>
-                        <td>120 x 120 x 150</td>
-                    </tr>
-                    </tbody>
-            </table>
         </div>
 
-        <dialog id="editar_clientes" class="modal">
-            <h1 id="titulo">Editar cliente</h1>
-            <form>
-                <div class="linha">
-                    <div class="campo">
-                        <label>Razão social</label>
-                        <input type="text" />
-                    </div>
-                    <div class="campo">
-                        <label>Nome fantasia</label>
-                        <input type="text" />
-                    </div>
-                </div>
-                <div class="linha">
-                    <div class="campo">
-                        <label>CNPJ</label>
-                        <input type="text" />
-                    </div>
-                    <div class="campo">
-                        <label>Telefone</label>
-                        <input type="text" />
-                    </div>
-                </div>
-                <div class="linha">
-                    <div class="campo">
-                        <label>E-mail</label>
-                        <input type="email" />
-                    </div>
-                </div>
 
-                <div class="acoes">
-                    <button class="btn_primario">Salvar</button>
-                    <button class="btn_terciario">Excluir</button>
-                    <button class="btn_quartenario">Cancelar</button>
-                </div>
-            </form>
-        </dialog>
 
-        <dialog id="editar_produtos" class="modal">
-            <h1 id="titulo">Editar produto</h1>
-            <form>
-                <div class="linha">
-                    <div class="campo">
-                        <label>Código: </label>
-                        <input type="text" />
-                    </div>
-                    <div class="campo">
-                        <label>Nome: </label>
-                        <input type="text" />
-                    </div>
-                </div>
 
-                <div class="campo">
-                    <label>Dimensões</label>
-                    <input type="text" />
-                </div>
-
-                <div class="acoes">
-                    <button class="btn_primario">Salvar</button>
-                    <button class="btn_terciario">Excluir</button>
-                    <button class="btn_quartenario">Cancelar</button>
-                </div>
-            </form>
-        </dialog>
-
-        <dialog id="menu-modal">
-            <div id="menu-active">
-                <div class="menu-item">Admin</div>
-                <div class="menu-item">Clientes</div>
-                <div class="menu-item"> Produtos</div>
-                <div class="menu-item"> Sair</div>
-            </div>
-        </dialog>
     </main>
 
 
     <footer>&copy caçadores de código 2023</footer>
+
+    <script type="module" src="../script/pages/admin.js"></script>
 </body>
 
 </html>
