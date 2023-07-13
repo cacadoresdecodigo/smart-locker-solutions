@@ -46,7 +46,7 @@ th {
 /*------------- MODAL ------------- */
 .modal {
     margin: auto auto;
-    padding: 4rem;
+    padding: 3.5rem;
     background: #e3e3e3;
     border: transparent;
     border-radius: 12px;
@@ -60,12 +60,13 @@ dialog::backdrop {
 
 #titulo {
     text-align: center;
+    margin-bottom: 8px;
 }
 
 form {
     max-width: 500px;
-    margin: 50px auto;
-    gap: 1rem;
+    /* margin: 50px auto; */
+    /* gap: 1rem; */
 }
 
 .campo {
