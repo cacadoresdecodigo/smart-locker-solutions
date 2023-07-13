@@ -21,13 +21,13 @@
 
 .descricao {
   display: grid;
-  gap: 1.2rem;  
+  gap: 1.rem;  
 }
 
 #subtitulo {
   margin-top: 70px;
   font-size: 1.4rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 
