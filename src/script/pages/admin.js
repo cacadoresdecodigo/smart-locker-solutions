@@ -18,47 +18,122 @@ renderizarTabelaProdutos(produtos, containerProdutos);
 renderizarModalEditarProdutos();
 
 const tableClientes = document.getElementById("tabela_clientes");
+const tableProdutos = document.getElementById("tabela_produtos");
+const modalClientes = document.getElementById("editar_clientes");
+const modalProdutos = document.getElementById("editar_produtos");
 
-if (tableClientes) {
-  const tbodyClientes = tableClientes.getElementsByTagName("tbody")[0];
-  const bodyRowClientes = tbodyClientes.getElementsByTagName("tr");
-  const modalClientes = document.getElementById("editar_clientes");
+openModal();
+editarProdutoFormHandler();
+editarClientesFormHandler();
 
-  for (let i = 0; i < bodyRowClientes.length; i++) {
-    bodyRowClientes[i].addEventListener("click", (e) => {
-      const cnpjEmpresa = e.target.parentNode.childNodes[1].textContent;
+function editarClientesFormHandler() {
+  const btnCancelarCliente = document.getElementById("btn_cancelar_cliente");
+  btnCancelarCliente.addEventListener("click", (e) => {
+    e.preventDefault();
+    modalClientes.close();
+  });
 
-      const empresa = selectEmpresa(cnpjEmpresa, empresas);
-      const inputs = modalClientes.lastChild.elements;
-      inputs[0].value = empresa.razaosocial;
-      inputs[1].value = empresa.nomefantasia;
-      inputs[2].value = empresa.cnpj;
-      inputs[3].value = empresa.telefone;
-      inputs[4].value = empresa.email;
-      inputs[5].value = empresa.endereco;
-      inputs[6].value = empresa.senha;
-      modalClientes.showModal();
-    });
-  }
+  const btnAddNovaEmpresa = document.getElementById("btn_salvar_cliente");
+  btnAddNovaEmpresa.addEventListener("click", (e) => {
+    e.preventDefault();
+    const inputs = modalClientes.lastChild.elements;
+    const empresas = {
+      razaoSocial: inputs[0].value,
+      nomeFantasia: inputs[1].value,
+      cnpj: inputs[2].value,
+      telefone: inputs[3].value,
+      email: inputs[4].value,
+      endereco: inputs[5].value,
+      senha: inputs[6].value,
+    };
+    console.log(empresas);
+  });
+
+  const btnExcluirProduto = document.getElementById("btn_excluir_cliente");
+  btnExcluirProduto.addEventListener("click", (e) => {
+    e.preventDefault();
+    const inputs = modalClientes.lastChild.elements;
+    const cod = inputs[2].value;
+    console.log(cod);
+  });
 }
 
-const tableProdutos = document.getElementById("tabela_produtos");
+function editarProdutoFormHandler() {
+  const btnNovoProduto = document.getElementById("new_product_btn");
+  btnNovoProduto.addEventListener("click", (e) => {
+    const modal = document.getElementById("editar_produtos");
+    modal.showModal();
+  });
 
-if (tableProdutos) {
-  const tbodyProdutos = tableProdutos.getElementsByTagName("tbody")[0];
-  const bodyRowProdutos = tbodyProdutos.getElementsByTagName("tr");
-  const modalProdutos = document.getElementById("editar_produtos");
+  const btnCancelarProduto = document.getElementById("btn_cancelar_produto");
+  btnCancelarProduto.addEventListener("click", (e) => {
+    e.preventDefault();
+    const inputs = modalProdutos.lastChild.elements;
+    inputs[0].value = "";
+    inputs[1].value = "";
+    inputs[2].value = "";
+    modalProdutos.close();
+  });
 
-  for (let i = 0; i < bodyRowProdutos.length; i++) {
-    bodyRowProdutos[i].addEventListener("click", (e) => {
-      const codProduto = e.target.parentNode.childNodes[0].textContent;
-      const produto = selectProduto(codProduto, produtos);
-      const inputs = modalProdutos.lastChild.elements;
-      inputs[0].value = produto.codigo;
-      inputs[1].value = produto.tamanho;
-      inputs[2].value = produto.dimensoes;
-      modalProdutos.showModal();
-    });
+  const btnAddNovoProduto = document.getElementById("btn_salvar_produto");
+  btnAddNovoProduto.addEventListener("click", (e) => {
+    e.preventDefault();
+    const inputs = modalProdutos.lastChild.elements;
+    const produto = {
+      codigo: inputs[0].value,
+      nome: inputs[1].value,
+      dimensoes: inputs[2].value,
+    };
+    console.log(produto);
+  });
+
+  const btnExcluirProduto = document.getElementById("btn_excluir_produto");
+  btnExcluirProduto.addEventListener("click", (e) => {
+    e.preventDefault();
+    const inputs = modalProdutos.lastChild.elements;
+    const cod = inputs[0].value;
+    console.log(cod);
+  });
+}
+
+function openModal() {
+  if (tableClientes) {
+    const tbodyClientes = tableClientes.getElementsByTagName("tbody")[0];
+    const bodyRowClientes = tbodyClientes.getElementsByTagName("tr");
+
+    for (let i = 0; i < bodyRowClientes.length; i++) {
+      bodyRowClientes[i].addEventListener("click", (e) => {
+        const cnpjEmpresa = e.target.parentNode.childNodes[1].textContent;
+
+        const empresa = selectEmpresa(cnpjEmpresa, empresas);
+        const inputs = modalClientes.lastChild.elements;
+        inputs[0].value = empresa.razaosocial;
+        inputs[1].value = empresa.nomefantasia;
+        inputs[2].value = empresa.cnpj;
+        inputs[3].value = empresa.telefone;
+        inputs[4].value = empresa.email;
+        inputs[5].value = empresa.endereco;
+        inputs[6].value = empresa.senha;
+        modalClientes.showModal();
+      });
+    }
+  }
+
+  if (tableProdutos) {
+    const tbodyProdutos = tableProdutos.getElementsByTagName("tbody")[0];
+    const bodyRowProdutos = tbodyProdutos.getElementsByTagName("tr");
+
+    for (let i = 0; i < bodyRowProdutos.length; i++) {
+      bodyRowProdutos[i].addEventListener("click", (e) => {
+        const codProduto = e.target.parentNode.childNodes[0].textContent;
+        const produto = selectProduto(codProduto, produtos);
+        const inputs = modalProdutos.lastChild.elements;
+        inputs[0].value = produto.codigo;
+        inputs[1].value = produto.tamanho;
+        inputs[2].value = produto.dimensoes;
+        modalProdutos.showModal();
+      });
+    }
   }
 }
 
@@ -169,7 +244,7 @@ function renderizarModalEditarClientes() {
     campo.classList.add("campo");
     const label = document.createElement("label");
     label.textContent = campos[i][0];
-    label.htmlFor = campos[i][0];
+    label.htmlFor = campos[i][1];
     const input = document.createElement("input");
     input.type = campos[i][2];
     input.id = campos[i][1];
@@ -184,15 +259,16 @@ function renderizarModalEditarClientes() {
   acoes.classList.add("acoes");
 
   const btnData = [
-    ["Salvar", "btn_primario"],
-    ["Cancelar", "btn_terciario"],
-    ["Excluir", "btn_quartenario"],
+    ["Salvar", "btn_primario", "btn_salvar_cliente"],
+    ["Cancelar", "btn_terciario", "btn_cancelar_cliente"],
+    ["Excluir", "btn_quartenario", "btn_excluir_cliente"],
   ];
 
   for (let i = 0; i < btnData.length; i++) {
     const button = document.createElement("button");
     button.classList.add(btnData[i][1]);
     button.textContent = btnData[i][0];
+    button.id = btnData[i][2];
     acoes.appendChild(button);
   }
 
@@ -226,7 +302,7 @@ function renderizarModalEditarProdutos() {
     campo.classList.add("campo");
     const label = document.createElement("label");
     label.textContent = campos[i][0];
-    label.htmlFor = campos[i][0];
+    label.htmlFor = campos[i][1];
     const input = document.createElement("input");
     input.type = campos[i][2];
     input.id = campos[i][1];
@@ -241,15 +317,16 @@ function renderizarModalEditarProdutos() {
   acoes.classList.add("acoes");
 
   const btnData = [
-    ["Salvar", "btn_primario"],
-    ["Cancelar", "btn_terciario"],
-    ["Excluir", "btn_quartenario"],
+    ["Salvar", "btn_primario", "btn_salvar_produto"],
+    ["Cancelar", "btn_terciario", "btn_cancelar_produto"],
+    ["Excluir", "btn_quartenario", "btn_excluir_produto"],
   ];
 
   for (let i = 0; i < btnData.length; i++) {
     const button = document.createElement("button");
     button.classList.add(btnData[i][1]);
     button.textContent = btnData[i][0];
+    button.id = btnData[i][2];
     acoes.appendChild(button);
   }
 
