@@ -11,8 +11,8 @@ export function excluirEmpresa(cnpj) {
     }
   }
 
-  if (jaExiste) {
-    alert("Usuario já existe");
+  if (!jaExiste) {
+    alert("Usuario não existe");
     return;
   }
 

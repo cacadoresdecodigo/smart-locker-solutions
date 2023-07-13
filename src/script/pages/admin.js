@@ -6,6 +6,7 @@ import {
   sync as sincronizarProdutos,
   select as selectProduto,
 } from "../../data/localStorage/produtos.js";
+import { excluirEmpresa } from "../excluirEmpresa.js";
 
 const containerClientes = document.getElementById("container_clientes");
 const containerProdutos = document.getElementById("container_produtos");
@@ -55,12 +56,13 @@ function editarClientesFormHandler() {
     console.log(empresas);
   });
 
-  const btnExcluirProduto = document.getElementById("btn_excluir_cliente");
-  btnExcluirProduto.addEventListener("click", (e) => {
+  const btnExcluirEmpresa = document.getElementById("btn_excluir_cliente");
+  btnExcluirEmpresa.addEventListener("click", (e) => {
     e.preventDefault();
     const inputs = modalClientes.lastChild.elements;
-    const cod = inputs[2].value;
-    console.log(cod);
+    const cnpj = inputs[2].value;
+    excluirEmpresa(cnpj);
+    window.location.href="./admin.html"
   });
 }
 
