@@ -1,5 +1,11 @@
-import { sync as sincronizarEmpresas, select as selectEmpresa } from "../../data/localStorage/empresas.js";
-import { sync as sincronizarProdutos, select as selectProduto } from "../../data/localStorage/produtos.js";
+import {
+  sync as sincronizarEmpresas,
+  select as selectEmpresa,
+} from "../../data/localStorage/empresas.js";
+import {
+  sync as sincronizarProdutos,
+  select as selectProduto,
+} from "../../data/localStorage/produtos.js";
 
 const containerClientes = document.getElementById("container_clientes");
 const containerProdutos = document.getElementById("container_produtos");
@@ -149,7 +155,13 @@ function renderizarTabelaClientes(empresas, root) {
     thead.classList.add("tabela_header");
     const headerRow = document.createElement("tr");
 
-    const tableHeaders = ["Nome Fantasia", "CNPJ", "Endereço", "E-mail", "Telefone"];
+    const tableHeaders = [
+      "Razão Social",
+      "CNPJ",
+      "Endereço",
+      "E-mail",
+      "Telefone",
+    ];
     for (let i = 0; i < tableHeaders.length; i++) {
       const th = document.createElement("th");
       th.textContent = tableHeaders[i];
@@ -164,7 +176,7 @@ function renderizarTabelaClientes(empresas, root) {
     for (let i = 0; i < empresas.length; i++) {
       const bodyRow = document.createElement("tr");
       bodyRow.classList.add("body_row");
-      bodyRow.insertCell().textContent = empresas[i].nomefantasia;
+      bodyRow.insertCell().textContent = empresas[i].razaosocial;
       bodyRow.insertCell().textContent = empresas[i].cnpj;
       bodyRow.insertCell().textContent = empresas[i].endereco;
       bodyRow.insertCell().textContent = empresas[i].email;
@@ -231,7 +243,6 @@ function renderizarModalEditarClientes() {
 
   const campos = [
     ["Razão Social", "razaoSocial", "text"],
-    ["Nome Fantasia", "nomFantasia", "text"],
     ["CNPJ", "cnpj", "text"],
     ["Telefone", "telefone", "text"],
     ["E-mail", "email", "email"],
