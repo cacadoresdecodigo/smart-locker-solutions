@@ -1,37 +1,15 @@
-/*
-let Empresa = {
-    cnpj: string
-    nome: string
-    endereço: string
-}
-*/
-
-// Retorna um array de empresas sincronizado com o local storage.
-// Se não existir uma chave "empresas" no local storage retorna um aray vazio.
-function sync() {
-  const dadosEmpresas = localStorage.getItem("empresas");
-  if (!dadosEmpresas) {
-    return [];
-  }
-  const empresas = JSON.parse(dadosEmpresas);
-  return empresas;
-}
-
-// Recebe um array de empresas e manda para o o local storage
-function load(empresas) {
-  const dadosEmpresas = JSON.stringify(empresas);
-  localStorage.setItem("empresas", dadosEmpresas);
-}
-
 //Recebe um array de empresas e insere um elemento nele
 function create(empresas, empresa) {
-  empresas.push(empresa);
+  if (empresa) {
+    empresas.push(empresa);
+    return empresa;
+  }
 }
 
 //Recebe um array de empresas e percorre o array até achar o elemento com o mesmo cnpj retornando o elemento;
-function select(cnpj, empresas) {
+function select(email, empresas) {
   for (let i = 0; i < empresas.length; i++) {
-    if (empresas[i].cnpj === cnpj) {
+    if (empresas[i].cnpj === email) {
       return empresas[i];
     }
   }
@@ -47,12 +25,12 @@ function update(empresas, empresaAtualizada) {
 }
 
 //Recebe um array de empresas e percorre o array até achar o elemento com o mesmo cnpj removendo esse elemento do array
-function remove(cnpj, empresas) {
+function remove(email, empresas) {
   for (let i = 0; i < empresas.length; i++) {
-    if (empresas[i].cnpj === cnpj) {
+    if (empresas[i].cnpj === email) {
       empresas.splice(i, 1);
     }
   }
 }
 
-export { sync, load, create, select, update, remove };
+export { create, select, update, remove };
