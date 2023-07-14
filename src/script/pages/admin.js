@@ -1,5 +1,8 @@
 import { excluirEmpresa } from "../excluirEmpresa.js";
 import { sync, load } from "../../data/locastorage.js";
+import { select as selectEmpresa } from "../../data/empresas.js";
+import { atualizarEmpresa } from "../atualizarEmpresa.js";
+import { pegarDadosForm } from "../pegarDadosForm.js";
 
 const containerClientes = document.getElementById("container_clientes");
 const containerProdutos = document.getElementById("container_produtos");
@@ -7,9 +10,6 @@ const main = document.getElementById("content");
 
 const empresas = sync("empresas");
 const produtos = sync("produtos");
-
-console.log(empresas);
-console.log(produtos);
 
 renderizarTabelaClientes(empresas, containerClientes);
 renderizarModalEditarClientes();
@@ -27,34 +27,27 @@ editarProdutoFormHandler();
 editarClientesFormHandler();
 
 function editarClientesFormHandler() {
-  const btnCancelarCliente = document.getElementById("btn_cancelar_cliente");
-  btnCancelarCliente.addEventListener("click", (e) => {
+  const btnCancelar = document.getElementById("btn_cancelar_cliente");
+  btnCancelar.addEventListener("click", (e) => {
     e.preventDefault();
     modalClientes.close();
   });
 
-  const btnAddNovaEmpresa = document.getElementById("btn_salvar_cliente");
-  btnAddNovaEmpresa.addEventListener("click", (e) => {
+  const btnSalvar = document.getElementById("btn_salvar_cliente");
+  btnSalvar.addEventListener("click", (e) => {
     e.preventDefault();
-    const inputs = modalClientes.lastChild.elements;
-    const empresas = {
-      razaoSocial: inputs[0].value,
-      nomeFantasia: inputs[1].value,
-      cnpj: inputs[2].value,
-      telefone: inputs[3].value,
-      email: inputs[4].value,
-      endereco: inputs[5].value,
-      senha: inputs[6].value,
-    };
-    console.log(empresas);
+    const form = modalClientes.lastChild;
+    const dadosAtualizados = pegarDadosForm(form);
+    atualizarEmpresa(dadosAtualizados);
+    window.location.href = "./admin.html";
   });
 
   const btnExcluirEmpresa = document.getElementById("btn_excluir_cliente");
   btnExcluirEmpresa.addEventListener("click", (e) => {
     e.preventDefault();
-    const inputs = modalClientes.lastChild.elements;
-    const cnpj = inputs[2].value;
-    excluirEmpresa(cnpj);
+    const form = modalClientes.lastChild;
+    const empresa = pegarDadosForm(form);
+    excluirEmpresa(empresa.cnpj);
     window.location.href = "./admin.html";
   });
 }
@@ -109,12 +102,11 @@ function openModal() {
         const empresa = selectEmpresa(cnpjEmpresa, empresas);
         const inputs = modalClientes.lastChild.elements;
         inputs[0].value = empresa.razaosocial;
-        inputs[1].value = empresa.nomefantasia;
-        inputs[2].value = empresa.cnpj;
-        inputs[3].value = empresa.telefone;
-        inputs[4].value = empresa.email;
-        inputs[5].value = empresa.endereco;
-        inputs[6].value = empresa.senha;
+        inputs[1].value = empresa.cnpj;
+        inputs[2].value = empresa.telefone;
+        inputs[3].value = empresa.email;
+        inputs[4].value = empresa.endereco;
+        inputs[5].value = empresa.senha;
         modalClientes.showModal();
       });
     }
@@ -237,12 +229,12 @@ function renderizarModalEditarClientes() {
   linha.classList.add("formulario_linha");
 
   const campos = [
-    ["Razão Social", "razaoSocial", "text"],
+    ["Razão Social", "razaosocial", "text"],
     ["CNPJ", "cnpj", "text"],
     ["Telefone", "telefone", "text"],
     ["E-mail", "email", "email"],
     ["Endereço", "endereco", "text"],
-    ["Senha", "password", "password"],
+    ["Senha", "senha", "password"],
   ];
 
   for (let i = 0; i < campos.length; i++) {
@@ -254,6 +246,9 @@ function renderizarModalEditarClientes() {
     const input = document.createElement("input");
     input.type = campos[i][2];
     input.id = campos[i][1];
+    if (input.id === "razaosocial" || input.id === "cnpj") {
+      input.setAttribute("disabled", "true");
+    }
     campo.appendChild(label);
     campo.appendChild(input);
     linha.appendChild(campo);

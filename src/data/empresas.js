@@ -19,7 +19,10 @@ function select(email, empresas) {
 function update(empresas, empresaAtualizada) {
   for (let i = 0; i < empresas.length; i++) {
     if (empresas[i].cnpj === empresaAtualizada.cnpj) {
-      empresas[i] = empresaAtualizada;
+      empresas[i].telefone = empresaAtualizada.telefone;
+      empresas[i].email = empresaAtualizada.email;
+      empresas[i].endereco = empresaAtualizada.endereco;
+      empresas[i].senha = empresaAtualizada.senha;
     }
   }
 }
