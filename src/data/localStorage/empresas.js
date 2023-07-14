@@ -50,7 +50,7 @@ function update(empresas, empresaAtualizada) {
 function remove(cnpj, empresas) {
   for (let i = 0; i < empresas.length; i++) {
     if (empresas[i].cnpj === cnpj) {
-      empresas.splice(index, 1);
+      empresas.splice(i, 1);
     }
   }
 }
