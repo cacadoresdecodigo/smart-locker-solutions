@@ -49,13 +49,13 @@ header {
 /* MENU */
 
 #dropdown-menu {
-    width: 150px;
+    width: 200px;
     border: transparent;
     background-color: #4F9153;
     color: #fff;
     font-family: inherit;
     font-size: 0.9rem;
-    padding: 12px;
+    padding: 25px;
     border-radius: 15px;
     cursor: pointer;
     font-weight: 600;
