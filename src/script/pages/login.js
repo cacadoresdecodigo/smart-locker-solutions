@@ -8,6 +8,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const credenciais = pegarDadosForm(form);
+
   if (ehAdmin(credenciais.inputEmail)) {
     const autenticado = autenticar(credenciais, "admins");
     if (autenticado) {
@@ -19,6 +20,7 @@ form.addEventListener("submit", (e) => {
         },
         "session"
       );
+      window.location.href = "./index.html";
     } else {
       alert("E-mail ou Senha estão incorretos");
     }
@@ -33,22 +35,11 @@ form.addEventListener("submit", (e) => {
         },
         "session"
       );
+      window.location.href = "./index.html";
     } else {
       alert("E-mail ou Senha estão incorretos");
     }
   }
-
-  //   for (let i = 0; i < empresas.length; i++) {
-  //     if (
-  //       emailLogado.value == empresas[i].email &&
-  //       senhaLogado.value == empresas[i].senha
-  //     ) {
-  //       let userLogado = emailLogado.value;
-  //       localStorage.setItem("userLogado", JSON.stringify(userLogado));
-  //       console.log(userLogado, JSON.parse(localStorage.getItem("userLogado")));
-  //       window.location.href = "./index.html";
-  //     }
-  //   }
 });
 
 function ehAdmin(email) {
