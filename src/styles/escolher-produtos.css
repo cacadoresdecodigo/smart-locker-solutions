@@ -35,11 +35,11 @@
 
 #detalhes textarea {
   width: 500px;
-  height: 300px;
+  height: 210px;
   margin-bottom: 1rem;
 }
 
 .btn_primario {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   max-width: 150px;
 }
