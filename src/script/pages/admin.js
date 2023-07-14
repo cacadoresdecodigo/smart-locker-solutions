@@ -1,6 +1,7 @@
 import { excluirEmpresa } from "../excluirEmpresa.js";
 import { sync, load } from "../../data/locastorage.js";
 import { select as selectEmpresa } from "../../data/empresas.js";
+import { select as selectProduto } from "../../data/produtos.js";
 import { atualizarEmpresa } from "../atualizarEmpresa.js";
 import { pegarDadosForm } from "../pegarDadosForm.js";
 
