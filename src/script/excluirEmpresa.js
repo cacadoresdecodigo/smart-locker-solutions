@@ -1,7 +1,9 @@
-import { sync, load, remove } from "../data/localStorage/empresas.js";
+import { remove } from "../data/empresas.js";
+
+import { sync, load } from "../data/locastorage.js";
 
 export function excluirEmpresa(cnpj) {
-  const empresas = sync();
+  const empresas = sync("empresas");
 
   let jaExiste = false;
 
@@ -17,5 +19,5 @@ export function excluirEmpresa(cnpj) {
   }
 
   remove(cnpj, empresas);
-  load(empresas);
+  load(empresas, "empresas");
 }

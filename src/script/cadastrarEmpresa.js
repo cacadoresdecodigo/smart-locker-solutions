@@ -1,7 +1,8 @@
-import { sync, load, create } from "../data/localStorage/empresas.js";
+import { create } from "../data/empresas.js";
+import { sync, load } from "../data/locastorage.js";
 
 export function cadastrarEmpresa(empresa) {
-  const empresas = sync();
+  const empresas = sync("empresas");
 
   let msgErro = "";
 
@@ -20,5 +21,5 @@ export function cadastrarEmpresa(empresa) {
   }
 
   create(empresas, empresa);
-  load(empresas);
+  load(empresas, "empresas");
 }

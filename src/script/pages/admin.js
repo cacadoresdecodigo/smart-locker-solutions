@@ -1,19 +1,12 @@
-import {
-  sync as sincronizarEmpresas,
-  select as selectEmpresa,
-} from "../../data/localStorage/empresas.js";
-import {
-  sync as sincronizarProdutos,
-  select as selectProduto,
-} from "../../data/localStorage/produtos.js";
 import { excluirEmpresa } from "../excluirEmpresa.js";
+import { sync, load } from "../../data/locastorage.js";
 
 const containerClientes = document.getElementById("container_clientes");
 const containerProdutos = document.getElementById("container_produtos");
 const main = document.getElementById("content");
 
-const empresas = sincronizarEmpresas();
-const produtos = sincronizarProdutos();
+const empresas = sync("empresas");
+const produtos = sync("produtos");
 
 console.log(empresas);
 console.log(produtos);
@@ -62,7 +55,7 @@ function editarClientesFormHandler() {
     const inputs = modalClientes.lastChild.elements;
     const cnpj = inputs[2].value;
     excluirEmpresa(cnpj);
-    window.location.href="./admin.html"
+    window.location.href = "./admin.html";
   });
 }
 

@@ -1,5 +1,6 @@
 export function pegarDadosForm(form) {
-  if (!(form instanceof HTMLFormElement)) throw new Error("Elemento não é um formulário");
+  if (!(form instanceof HTMLFormElement))
+    throw new Error("Elemento não é um formulário");
 
   const inputs = Array.from(form.elements);
 
