@@ -12,8 +12,7 @@
 
 
 table {
-    border-left: solid 1px;
-    border-right: solid 1px;
+ 
     padding: 6px;
     margin: 0;
     text-align: center;
@@ -46,7 +45,7 @@ th {
 /*------------- MODAL ------------- */
 .modal {
     margin: auto auto;
-    padding: 3.5rem;
+    padding: 2.6rem;
     background: #e3e3e3;
     border: transparent;
     border-radius: 12px;
