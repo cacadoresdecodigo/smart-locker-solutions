@@ -1,19 +1,8 @@
-function sync() {
-  const dadosProdutos = localStorage.getItem("produtos");
-  if (!dadosProdutos) {
-    return [];
-  }
-  const produtos = JSON.parse(dadosProdutos);
-  return produtos;
-}
-
-function load(produtos) {
-  const dadosProdutos = JSON.stringify(produtos);
-  localStorage.setItem("produtos", dadosProdutos);
-}
-
 function create(produtos, produto) {
-  produtos.push(produto);
+  if (produto) {
+    produtos.push(produto);
+    return produto;
+  }
 }
 
 function select(codigo, produtos) {
@@ -40,4 +29,4 @@ function remove(codigo, produtos) {
   }
 }
 
-export { sync, load, create, select, update, remove };
+export { create, select, update, remove };
