@@ -4,6 +4,7 @@ import { select as selectEmpresa } from "../../data/empresas.js";
 import { select as selectProduto } from "../../data/produtos.js";
 import { atualizarEmpresa } from "../atualizarEmpresa.js";
 import { pegarDadosForm } from "../pegarDadosForm.js";
+import mostrarMensagem from "../../data/alert.js";
 
 const containerClientes = document.getElementById("container_clientes");
 const containerProdutos = document.getElementById("container_produtos");
@@ -18,7 +19,6 @@ renderizarModalEditarClientes();
 renderizarTabelaProdutos(produtos, containerProdutos);
 renderizarModalEditarProdutos();
 
-const tableClientes = document.getElementById("tabela_clientes");
 const tableProdutos = document.getElementById("tabela_produtos");
 const modalClientes = document.getElementById("editar_clientes");
 const modalProdutos = document.getElementById("editar_produtos");
@@ -40,16 +40,21 @@ function editarClientesFormHandler() {
     const form = modalClientes.lastChild;
     const dadosAtualizados = pegarDadosForm(form);
     atualizarEmpresa(dadosAtualizados);
-    window.location.href = "./admin.html";
+    mostrarMensagem("sucesso", "Cliente salvo.");
+    modalClientes.close();
+    renderizarTabelaClientes(sync("empresas"), containerClientes);
+    openModal();
   });
 
   const btnExcluirEmpresa = document.getElementById("btn_excluir_cliente");
   btnExcluirEmpresa.addEventListener("click", (e) => {
-    e.preventDefault();
-    const form = modalClientes.lastChild;
-    const empresa = pegarDadosForm(form);
-    excluirEmpresa(empresa.cnpj);
-    window.location.href = "./admin.html";
+    if (confirm("Tem certeza que deseja excluir?")) {
+      e.preventDefault();
+      const form = modalClientes.lastChild;
+      const empresa = pegarDadosForm(form);
+      excluirEmpresa(empresa.cnpj);
+      window.location.href = "./admin.html";
+    }
   });
 }
 
@@ -92,6 +97,8 @@ function editarProdutoFormHandler() {
 }
 
 function openModal() {
+  const tableClientes = document.getElementById("tabela_clientes");
+
   if (tableClientes) {
     const tbodyClientes = tableClientes.getElementsByTagName("tbody")[0];
     const bodyRowClientes = tbodyClientes.getElementsByTagName("tr");
@@ -132,6 +139,7 @@ function openModal() {
 }
 
 function renderizarTabelaClientes(empresas, root) {
+  root.innerHTML = "";
   if (empresas.length === 0) {
     const p = document.createElement("p");
     p.textContent = "Não há empresas cadastrados no momento";
@@ -143,13 +151,7 @@ function renderizarTabelaClientes(empresas, root) {
     thead.classList.add("tabela_header");
     const headerRow = document.createElement("tr");
 
-    const tableHeaders = [
-      "Razão Social",
-      "CNPJ",
-      "Endereço",
-      "E-mail",
-      "Telefone",
-    ];
+    const tableHeaders = ["Razão Social", "CNPJ", "Endereço", "E-mail", "Telefone"];
     for (let i = 0; i < tableHeaders.length; i++) {
       const th = document.createElement("th");
       th.textContent = tableHeaders[i];

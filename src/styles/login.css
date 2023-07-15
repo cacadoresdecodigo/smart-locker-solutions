@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 690px;
+  width: 635px;
   background: rgb(205, 204, 204);
   
 }
@@ -85,7 +85,7 @@ img {
 
 .login_h1 {
   margin: 0px;
-  display: flex;
+   display: flex;
   justify-content: center;
 }
 

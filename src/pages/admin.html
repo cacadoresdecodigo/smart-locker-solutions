@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin - Smart Locker Solutions</title>
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/global.css" />
-    <link rel="stylesheet" href="../styles/admin.css">
-</head>
+    <link rel="stylesheet" href="../styles/admin.css" />
+    <link rel="stylesheet" href="../styles/alert.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div id="logo"><img src="../assets/logo3.png" alt="Logo" /></div>
-        <nav id="main_nav">
-            <a href="./index.html">Home</a>
-            <a href="./produtos.html">Nossos Produtos</a>
-            <a href="./sobre.html">Quem Somos</a>
+      <div id="logo"><img src="../assets/logo3.png" alt="Logo" /></div>
+      <nav id="main_nav">
+        <a href="./index.html">Home</a>
+        <a href="./produtos.html">Nossos Produtos</a>
+        <a href="./sobre.html">Quem Somos</a>
 
-            <a id="btn_login" href="./login.html" class="btn_secundario">Login</a>
-            <select id="dropdown-menu">
-                <option value="sair">Nome</option>
-                <option value="admin">Clientes</option>
-                <option value="admin">Produtos</option>
-                <option value="sair">Sair</option>
-            </select>
-
-
-        </nav>
-
+        <a id="btn_login" href="./login.html" class="btn_secundario">Login</a>
+        <select id="dropdown-menu">
+          <option value="sair">Nome</option>
+          <option value="admin">Clientes</option>
+          <option value="admin">Produtos</option>
+          <option value="sair">Sair</option>
+        </select>
+      </nav>
     </header>
 
     <main id="content">
-        <div id="clientes" class="dashboard-container">
-            <h1 class="titulo">Meus Clientes</h1>
-            <button id="new_client_btn" class="btn_primario">Cadastrar Novo Cliente</button>
-            <div id="container_clientes">
-            </div>
+      <div id="clientes" class="dashboard-container">
+        <h1 class="titulo">Meus Clientes</h1>
+        <button id="new_client_btn" class="btn_primario">Cadastrar Novo Cliente</button>
+        <div id="container_clientes"></div>
+      </div>
 
-        </div>
-
-        <div id="produtos" class="dashboard-container">
-            <h1>Meus Produtos</h1>
-            <button id="new_product_btn" class="btn_primario">Cadastrar Novo Produto</button>
-            <div id="container_produtos">
-            </div>
-
-        </div>
-
-
-
-
+      <div id="produtos" class="dashboard-container">
+        <h1>Meus Produtos</h1>
+        <button id="new_product_btn" class="btn_primario">Cadastrar Novo Produto</button>
+        <div id="container_produtos"></div>
+      </div>
     </main>
 
-
+    <div class="container_mensagens">
+      <span id="mensagem_conteudo"></span>
+    </div>
     <footer>&copy caçadores de código 2023</footer>
 
     <script type="module" src="../script/pages/admin.js"></script>
-</body>
-
+  </body>
 </html>
