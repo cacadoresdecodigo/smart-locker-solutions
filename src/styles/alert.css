@@ -1,0 +1,48 @@
+.container_mensagens {
+  width: 50%;
+  overflow: hidden;
+  padding: 24px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+}
+
+.mensagem {
+  display: none;
+  width: 50%;
+  margin-left: auto;
+  padding: 24px 16px;
+  float: left;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  min-width: 350px;
+  line-height: 24px;
+}
+
+.erro {
+  background-color: #ffcaca;
+  border: 2px #a60202 solid;
+  color: #a60202;
+  border-radius: 5px;
+}
+.sucesso {
+  background-color: #a6ffbc;
+  border: 2px #00bd00 solid;
+  color: #00bd00;
+  border-radius: 5px;
+}
+.alerta {
+  background-color: #ffffbf;
+  border: 2px #2b2b2b solid;
+  color: #2b2b2b;
+  border-radius: 5px;
+}
+.info {
+  background-color: #b3e7ff;
+  border: 2px #018ace solid;
+  color: #018ace;
+  border-radius: 5px;
+}
