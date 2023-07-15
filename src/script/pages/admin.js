@@ -5,6 +5,9 @@ import { select as selectProduto } from "../../data/produtos.js";
 import { atualizarEmpresa } from "../atualizarEmpresa.js";
 import { pegarDadosForm } from "../pegarDadosForm.js";
 import mostrarMensagem from "../../data/alert.js";
+import { autorizar } from "../auth/autorizar.js";
+
+autorizar();
 
 const containerClientes = document.getElementById("container_clientes");
 const containerProdutos = document.getElementById("container_produtos");
@@ -151,7 +154,13 @@ function renderizarTabelaClientes(empresas, root) {
     thead.classList.add("tabela_header");
     const headerRow = document.createElement("tr");
 
-    const tableHeaders = ["Razão Social", "CNPJ", "Endereço", "E-mail", "Telefone"];
+    const tableHeaders = [
+      "Razão Social",
+      "CNPJ",
+      "Endereço",
+      "E-mail",
+      "Telefone",
+    ];
     for (let i = 0; i < tableHeaders.length; i++) {
       const th = document.createElement("th");
       th.textContent = tableHeaders[i];
