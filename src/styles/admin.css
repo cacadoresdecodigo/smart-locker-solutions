@@ -73,12 +73,10 @@ form {
 }
 
 .acoes {
-    margin-top: 2rem;
-
     display: flex;
     align-items: center;
-    gap: 2rem;
-    justify-content: space-around;
+    margin-top: 32px;
+    gap: 1rem;
 }
 
 .acoes p {
@@ -92,9 +90,13 @@ form {
 }
 
 .btn_terciario {
-    padding: 0.7rem 1.2rem;
+    padding: 0.7rem 2.7rem;
+} 
+
+.btn_quartenario {
+    padding: 0.7rem 2.7rem;
 }
 
 .btn_primario {
-    padding: 0.9rem 1.2rem;
+    padding: 0.7rem 2.7rem;
 }
