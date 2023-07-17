@@ -134,12 +134,13 @@
 
 .btn_primario {
   padding: 0.8rem 3.5rem;
-  font-size: 16px;
-  max-width: 205px;
+  font-size: 17px;
+  max-width: 250px;
+  color: rgb(50, 50, 50);
 }
 
 .btn_secundario {
   padding: 0.8rem 3.5rem;
-  font-size: 16px;
+  font-size: 17px;
   max-width: 190px;
 }
