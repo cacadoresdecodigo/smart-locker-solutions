@@ -4,7 +4,6 @@ export function autenticar(credenciais, chave) {
   const local = sync(chave);
   let equal;
   for (let i = 0; i < local.length; i++) {
-    console.log(local[i], credenciais);
     if (
       local[i].email === credenciais.inputEmail &&
       local[i].senha === credenciais.inputSenha
