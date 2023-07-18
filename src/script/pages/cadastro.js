@@ -14,13 +14,22 @@ if (section) {
 
   if (section.tipo === "empresa") {
     Select(
-      [`${section.email.split("@")[0]}`, "Editar Cadastro", "Escolher Locker"],
+      [
+        `${section.email.split("@")[0]}`,
+        "Editar Cadastro",
+        "Escolher Locker",
+        "Sair",
+      ],
       (selected) => {
         if (selected === "Editar Cadastro") {
           window.location.href = baseUrl + "/editar-cadastro.html";
         }
         if (selected === "Escolher Locker") {
           window.location.href = baseUrl + "/escolher-produtos.html";
+        }
+        if (selected === "Sair") {
+          localStorage.removeItem("session");
+          window.location.href = baseUrl + "/";
         }
       }
     );

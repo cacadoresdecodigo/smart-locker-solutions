@@ -8,13 +8,15 @@ export function autorizar() {
     .slice(paginaAtual.lastIndexOf("/"))
     .replace(/\.html$/, "");
 
+  console.log(path);
+
   const sessionData = localStorage.getItem("session");
   const session = JSON.parse(sessionData);
 
   if (!session) {
-    const permissoes = ["/index", "/cadastro", "/produtos", "/sobre", "/login"];
+    const permissoes = ["/", "/cadastro", "/produtos", "/sobre", "/login"];
     if (!permissoes.includes(path)) {
-      //   window.location.href = baseUrl + "/login.html";
+      window.location.href = baseUrl + "/";
     }
   }
 
@@ -22,13 +24,7 @@ export function autorizar() {
     const admin = ehAdmin(session.email);
 
     if (admin) {
-      const permissoes = [
-        "/index",
-        "/cadastro",
-        "/produtos",
-        "/sobre",
-        "/admin",
-      ];
+      const permissoes = ["/", "/cadastro", "/produtos", "/sobre", "/admin"];
       if (!permissoes.includes(path)) {
         window.location.href = baseUrl + "/";
       }
@@ -38,7 +34,7 @@ export function autorizar() {
 
     if (!admin) {
       const permissoes = [
-        "/index",
+        "/",
         "/cadastro",
         "/produtos",
         "/sobre",
