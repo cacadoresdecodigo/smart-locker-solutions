@@ -5,14 +5,14 @@
     padding: 4rem;
 }
 
-#container_clientes {
+#container {
     display: flex;
     flex-direction: column;
 }
 
 
 table {
- 
+
     padding: 6px;
     margin: 0;
     text-align: center;
@@ -91,7 +91,7 @@ form {
 
 .btn_terciario {
     padding: 0.7rem 2.7rem;
-} 
+}
 
 .btn_quartenario {
     padding: 0.7rem 2.7rem;
