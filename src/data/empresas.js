@@ -15,6 +15,14 @@ function select(cnpj, empresas) {
   }
 }
 
+function selectPorEmail(email, empresas) {
+  for (let i = 0; i < empresas.length; i++) {
+    if (empresas[i].email === email) {
+      return empresas[i];
+    }
+  }
+}
+
 //Recebe um array de empresas e percorre o array até achar o elemento com o mesmo cnpj atribuindo a esse elemento o valor de dados atualizados
 function update(empresas, empresaAtualizada) {
   for (let i = 0; i < empresas.length; i++) {
@@ -36,4 +44,4 @@ function remove(email, empresas) {
   }
 }
 
-export { create, select, update, remove };
+export { create, select, update, remove, selectPorEmail };
