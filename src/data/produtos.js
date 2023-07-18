@@ -24,7 +24,7 @@ function update(produtos, produtoAtualizado) {
 function remove(codigo, produtos) {
   for (let i = 0; i < produtos.length; i++) {
     if (produtos[i].codigo === codigo) {
-      produtos.splice(index, 1);
+      produtos.splice(i, 1);
     }
   }
 }

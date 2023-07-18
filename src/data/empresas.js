@@ -7,9 +7,9 @@ function create(empresas, empresa) {
 }
 
 //Recebe um array de empresas e percorre o array até achar o elemento com o mesmo cnpj retornando o elemento;
-function select(email, empresas) {
+function select(cnpj, empresas) {
   for (let i = 0; i < empresas.length; i++) {
-    if (empresas[i].cnpj === email) {
+    if (empresas[i].cnpj === cnpj) {
       return empresas[i];
     }
   }
