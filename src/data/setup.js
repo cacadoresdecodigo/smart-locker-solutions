@@ -53,4 +53,4 @@ const admins = [
 localStorage.setItem("empresas", JSON.stringify(empresas));
 localStorage.setItem("produtos", JSON.stringify(produtos));
 localStorage.setItem("admins", JSON.stringify(admins));
-localStorage.setItem("session", JSON.stringify(session));
+
