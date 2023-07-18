@@ -43,3 +43,7 @@
   margin-top: 0.5rem;
   max-width: 150px;
 }
+
+.campo label {
+  text-align: center;
+}
