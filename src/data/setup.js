@@ -1,23 +1,23 @@
 const empresas = [
   {
-    razaosocial: "Empresa 01",
     cnpj: "12123456/0001-12",
+    razaosocial: "Empresa 01",
     endereco: "Rua 1",
     telefone: "11-12345-1235",
     email: "empresa01@empresas.com",
     senha: "1234567",
   },
   {
-    razaosocial: "Empresa 02",
     cnpj: "12123456/0001-13",
+    razaosocial: "Empresa 02",
     endereco: "Rua 2",
     telefone: "11-12345-1236",
     email: "empresa02@empresas.com",
     senha: "1234567",
   },
   {
-    razaosocial: "Empresa 03",
     cnpj: "12123456/0001-14",
+    razaosocial: "Empresa 03",
     endereco: "Rua 3",
     telefone: "11-12345-1237",
     email: "empresa03@empresas.com",
@@ -49,12 +49,6 @@ const admins = [
     senha: "123456",
   },
 ];
-
-const session = {
-  email: "",
-  tipo: "",
-  timestamp: "",
-};
 
 localStorage.setItem("empresas", JSON.stringify(empresas));
 localStorage.setItem("produtos", JSON.stringify(produtos));
