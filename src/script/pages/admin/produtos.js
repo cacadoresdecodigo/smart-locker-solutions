@@ -45,12 +45,17 @@ export function renderizarTabelaProdutos(root, produtos) {
   root.appendChild(container);
 
   // ----- MODAL------
+  const btnData = [
+    ["Salvar", "btn_primario", "btn_salvar_produto"],
+    ["Cancelar", "btn_terciario", "btn_cancelar_produto"],
+    ["Excluir", "btn_quartenario", "btn_excluir_produto"],
+  ];
   const campos = [
     ["Código", "codigo", "text", false],
     ["Tamanho", "tamanho", "text", true],
     ["Dimensões", "dimensoes", "text", true],
   ];
-  const form = Form(campos);
+  const form = Form(campos, btnData);
   const modal = Modal("modal_produtos", "Editar Produtos", form);
   root.appendChild(modal);
 
@@ -76,14 +81,14 @@ export function renderizarTabelaProdutos(root, produtos) {
   }
 
   // FECHAR MODAL
-  const btnCancelar = document.getElementById("btn_cancelar");
+  const btnCancelar = document.getElementById("btn_cancelar_produto");
   btnCancelar.addEventListener("click", (e) => {
     e.preventDefault();
     modal.close();
   });
 
   //SALVAR PRODUTO COM DADOS ATUALIZADOS
-  const btnSalvar = document.getElementById("btn_salvar");
+  const btnSalvar = document.getElementById("btn_salvar_produto");
   btnSalvar.addEventListener("click", (e) => {
     e.preventDefault();
     const dadosAtualizados = pegarDadosForm(form);
@@ -94,7 +99,7 @@ export function renderizarTabelaProdutos(root, produtos) {
   });
 
   //EXCLUIR PRODUTO
-  const btnExcluir = document.getElementById("btn_excluir");
+  const btnExcluir = document.getElementById("btn_excluir_produto");
   btnExcluir.addEventListener("click", (e) => {
     if (confirm("Tem certeza que deseja excluir?")) {
       e.preventDefault();

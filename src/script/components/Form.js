@@ -1,4 +1,4 @@
-export default function Form(campos) {
+export default function Form(campos, btnData) {
   const form = document.createElement("form");
 
   const linha = document.createElement("div");
@@ -25,12 +25,6 @@ export default function Form(campos) {
 
   const acoes = document.createElement("div");
   acoes.classList.add("acoes");
-
-  const btnData = [
-    ["Salvar", "btn_primario", "btn_salvar"],
-    ["Cancelar", "btn_terciario", "btn_cancelar"],
-    ["Excluir", "btn_quartenario", "btn_excluir"],
-  ];
 
   for (let i = 0; i < btnData.length; i++) {
     const button = document.createElement("button");
