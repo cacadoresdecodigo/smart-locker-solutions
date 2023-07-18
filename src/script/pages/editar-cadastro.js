@@ -55,6 +55,7 @@ btnSalvar.addEventListener("click", (e) => {
   const dadosAtualizados = pegarDadosForm(form);
   console.log(dadosAtualizados);
   atualizarEmpresa(dadosAtualizados);
+  mostrarMensagem("sucesso", "Dados atualizados.");
   setTimeout(() => {
     window.location.href = baseUrl + "/editar-cadastro.html";
   }, 1200);
