@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro - Smart Locker Solutions</title>
@@ -8,82 +9,84 @@
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/cadastro.css" />
     <link rel="stylesheet" href="../styles/alert.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="container">
-      <header>
-        <div id="logo"><img src="../assets/logo3.png" alt="Logo" /></div>
-        <nav id="main_nav">
-          <a href="./index.html">Home</a>
-          <a href="./produtos.html">Nossos Produtos</a>
-          <a href="./sobre.html">Quem Somos</a>
-          <a class="btn_secundario" href="./login.html">Login</a>
-          <select id="dropdown-menu">
-            <option value="sair">Nome</option>
-            <option value="admin">Editar perfil</option>
-            <option value="sair">Sair</option>
-          </select>
-        </nav>
-      </header>
-      <main id="content">
-        <div id="cadastro_cabecalho">
-          <div class="cadastro_cabecalho_h3">
-            <h3>Crie seu cadastro</h3>
-          </div>
-          <div class="cadastro_cabecalho_p">
-            <p>
-              Para ser cliente é necessário preencher corretamente o formulário abaixo com os respectivos dados
-              cadastrais.
-            </p>
-          </div>
-        </div>
-        <!-- formuario de cadastro  -->
-        <form id="form_cadastro" class="formulario">
-          <div class="linha">
-            <div class="campo">
-              <label for="razaosocial">Razão social</label>
-              <input required id="razaosocial" type="text" />
-            </div>
-            <div class="campo">
-              <label for="cnpj">CNPJ</label>
-              <input required id="cnpj" type="text" />
-            </div>
-          </div>
-          <div class="linha">
-            <div class="campo">
-              <label for="endereco">Endereço</label>
-              <input required id="endereco" type="text" />
-            </div>
+        <header>
+            <div id="logo"><img src="../assets/logo3.png" alt="Logo" /></div>
+            <nav id="main_nav">
+                <a href="./index.html">Home</a>
+                <a href="./produtos.html">Nossos Produtos</a>
+                <a href="./sobre.html">Sobre</a>
+                <a id="btn_login" class="btn_secundario" href='./login.html'>Login</a>
+                <div id="select_menu">
 
-            <div class="campo">
-              <label for="telefone">Telefone</label>
-              <input required id="telefone" type="tel" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required />
+                </div>
+            </nav>
+        </header>
+        <main id="content">
+            <div id="cadastro_cabecalho">
+                <div class="cadastro_cabecalho_h3">
+                    <h3>Crie seu cadastro</h3>
+                </div>
+                <div class="cadastro_cabecalho_p">
+                    <p>
+                        Para ser cliente é necessário preencher corretamente o formulário abaixo com os respectivos
+                        dados
+                        cadastrais.
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="campo">
-            <label for="email">E-mail</label>
-            <input required id="email" type="email" />
-          </div>
-          <div class="campo">
-            <label for="senha">Senha</label>
-            <input required id="senha" type="password" />
-          </div>
-          <div class="formulario_acoes">
-            <button id="submit_btn" class="btn_primario">Cadastrar</button>
-            <p>
-              Ao preencher o formulário a cima você concorda com todos os nossos Termos de Uso e nossa Política de
-              Privacidade.
-            </p>
-          </div>
-        </form>
-        <!-- </div> -->
-      </main>
-      <div class="container_mensagens">
-        <span id="mensagem_conteudo"></span>
-      </div>
-      <script type="module" src="../script/pages/cadastro.js"></script>
-      <footer>&copy caçadores de código 2023</footer>
+            <!-- formuario de cadastro  -->
+            <form id="form_cadastro" class="formulario">
+                <div class="linha">
+                    <div class="campo">
+                        <label for="cnpj">CNPJ</label>
+                        <input required id="cnpj" type="text" />
+                    </div>
+                    <div class="campo">
+                        <label for="razaosocial">Razão social</label>
+                        <input required id="razaosocial" type="text" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <label for="endereco">Endereço</label>
+                        <input required id="endereco" type="text" />
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input required id="telefone" type="tel" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required />
+                    </div>
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input required id="email" type="email" />
+                </div>
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input required id="senha" type="password" />
+                </div>
+                <div class="formulario_acoes">
+                    <button id="submit_btn" class="btn_primario">Cadastrar</button>
+                    <p>
+                        Ao preencher o formulário a cima você concorda com todos os nossos Termos de Uso e nossa
+                        Política de
+                        Privacidade.
+                    </p>
+                </div>
+            </form>
+            <!-- </div> -->
+        </main>
+        <div class="container_mensagens">
+            <span id="mensagem_conteudo"></span>
+        </div>
+        <script type="module" src="../script/pages/cadastro.js"></script>
+        <footer>&copy caçadores de código 2023</footer>
     </div>
-  </body>
+    <script type="module" src="../script/pages/cadastro.js"></script>
+</body>
+
 </html>
