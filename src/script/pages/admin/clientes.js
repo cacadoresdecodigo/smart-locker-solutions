@@ -2,156 +2,147 @@ import Modal from "../../components/Modal.js";
 import Form from "../../components/Form.js";
 import Table from "../../components/Table.js";
 import { select } from "../../../data/empresas.js";
+import Button from "../../components/Button.js";
+
 import { cadastrarEmpresa } from "../../cadastrarEmpresa.js";
 import { atualizarEmpresa } from "../../atualizarEmpresa.js";
 import { excluirEmpresa } from "../../excluirEmpresa.js";
 import { pegarDadosForm } from "../../pegarDadosForm.js";
 import mostrarMensagem from "../../../data/alert.js";
-import { load } from "../../../data/locastorage.js";
+
+import { popularForm } from "../../utils/popularForm.js";
 
 const baseUrl = "http://127.0.0.1:5500/src/pages";
 
 export function renderizarTabelaClientes(root, empresas) {
   root.innerHTML = "";
-  const tabelaId = "tabela_clientes";
-  const textoTitulo = "Meus Clientes";
-  const btnConfig = {
-    id: "btn_cadastrar_cliente",
-    text: "Cadastrar Novo Cliente",
-  };
-
-  const headers = ["CNPJ", "Razão Social", "Endereço", "E-mail", "Telefone"];
 
   const title = document.createElement("h1");
-  title.textContent = textoTitulo;
-
-  const btnNovoCliente = document.createElement("button");
-  btnNovoCliente.id = btnConfig.id;
-  btnNovoCliente.classList.add("btn_primario");
-  btnNovoCliente.textContent = btnConfig.text;
+  title.textContent = "Meus Clientes";
   root.appendChild(title);
-  root.appendChild(btnNovoCliente);
+
+  Button(
+    root,
+    "btn_cadastrar_cliente",
+    "btn_primario",
+    "Cadastrar Novo Cliente",
+    (e) => {
+      document.getElementById("modal_cadastrar").showModal();
+    }
+  );
+
   const container = document.createElement("div");
   container.id = "container";
-
-  // Se não tiver elemento cria um elemento textual e retorna sem a tabela.
-
-  const table = Table(empresas, tabelaId, headers);
-  container.appendChild(table);
-
   root.appendChild(container);
 
-  // ----- MODAL EDITAR ------
-  const camposEditar = [
-    ["CNPJ", "cnpj", "text", false],
-    ["Razão Social", "razaosocial", "text", false],
-    ["Telefone", "telefone", "text", true],
-    ["E-mail", "email", "email", true],
-    ["Endereço", "endereco", "text", true],
-    ["Senha", "senha", "password", true],
-  ];
+  const headers = ["CNPJ", "Razão Social", "Endereço", "Telefone", "E-mail"];
 
-  const btnData = [
-    ["Salvar", "btn_primario", "btn_salvar_cliente"],
-    ["Cancelar", "btn_terciario", "btn_cancelar_cliente"],
-    ["Excluir", "btn_quartenario", "btn_excluir_cliente"],
-  ];
-  const formEditar = Form(camposEditar, btnData);
-  const modalEditar = Modal("modal_clientes", "Editar Clientes", formEditar);
-  root.appendChild(modalEditar);
+  Table(container, empresas, "tabela_clientes", headers, (table) => {
+    const bodyRow = table
+      .getElementsByTagName("tbody")[0]
+      .getElementsByTagName("tr");
 
-  // ABRIR MODAL EDITAR COM OS DADOS DO LOCAL STORAGE
-  const tbody = table.getElementsByTagName("tbody")[0];
-  const bodyRow = tbody.getElementsByTagName("tr");
-  for (let i = 0; i < bodyRow.length; i++) {
-    bodyRow[i].addEventListener("click", (e) => {
-      const current = e.target.parentNode.childNodes[0].textContent;
+    for (let i = 0; i < bodyRow.length; i++) {
+      bodyRow[i].addEventListener("click", (e) => {
+        const current = e.target.parentNode.childNodes[0].textContent;
 
-      let localData = select(current, empresas);
+        let localData = select(current, empresas);
 
-      const inputs = formEditar.elements;
+        popularForm(localData, "form_editar");
 
-      for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i] instanceof HTMLInputElement) {
-          inputs[i].value = localData[inputs[i].id];
-        }
-      }
-      modalEditar.showModal();
-    });
-  }
-
-  // FECHAR MODAL
-  const btnCancelar = document.getElementById("btn_cancelar_cliente");
-  btnCancelar.addEventListener("click", (e) => {
-    e.preventDefault();
-    modalEditar.close();
-  });
-
-  //SALVAR EMPRESA COM DADOS ATUALIZADOS
-  const btnSalvar = document.getElementById("btn_salvar_cliente");
-  btnSalvar.addEventListener("click", (e) => {
-    e.preventDefault();
-    const dadosAtualizados = pegarDadosForm(formEditar);
-    atualizarEmpresa(dadosAtualizados);
-    mostrarMensagem("sucesso", "Cliente salvo.");
-    modalEditar.close();
-    setTimeout(() => (window.location.href = baseUrl + "/admin.html"), 1200);
-  });
-
-  //EXCLUIR EMPRESA
-  const btnExcluirEmpresa = document.getElementById("btn_excluir_cliente");
-  btnExcluirEmpresa.addEventListener("click", (e) => {
-    if (confirm("Tem certeza que deseja excluir?")) {
-      e.preventDefault();
-      const empresa = pegarDadosForm(formEditar);
-      excluirEmpresa(empresa.cnpj);
-      window.location.href = "./admin.html";
+        document.getElementById("modal_editar").showModal();
+      });
     }
   });
 
-  //   // ----- MODAL CADASTRAR ------
-  //   const camposCadastrar = [
-  //     ["CNPJ", "cnpj", "text", true],
-  //     ["Razão Social", "razaosocial", "text", true],
-  //     ["Telefone", "telefone", "text", true],
-  //     ["E-mail", "email", "email", true],
-  //     ["Endereço", "endereco", "text", true],
-  //     ["Senha", "senha", "password", true],
-  //   ];
+  // ----- MODAL CADASTRAR ------
 
-  //   const btnDataCadastrar = [
-  //     ["Salvar", "btn_primario", "btn_cadastrar_empresa"],
-  //     ["Cancelar", "btn_terciario", "btn_fechar_empresa"],
-  //   ];
-  //   const formCadastrar = Form(camposCadastrar, btnDataCadastrar);
-  //   const modalCadastrar = Modal(
-  //     "modal_clientes_cadastrar",
-  //     "Cadastrar Novo Cliente",
-  //     formCadastrar
-  //   );
-  //   root.appendChild(modalCadastrar);
-  //   // ABRIR MODAL CADASTRAR
-  //   const btnCadastrarModal = document.getElementById("btn_cadastrar_cliente");
-  //   btnCadastrarModal.addEventListener("click", (e) => {
-  //     e.preventDefault();
-  //     modalCadastrar.showModal();
-  //   });
+  Modal(root, "modal_cadastrar", "Cadastrar Clientes");
+  Form(
+    "modal_cadastrar",
+    "form_cadastrar",
+    [
+      ["CNPJ", "cnpj", "text", true],
+      ["Razão Social", "razaosocial", "text", true],
+      ["Telefone", "telefone", "text", true],
+      ["E-mail", "email", "email", true],
+      ["Endereço", "endereco", "text", true],
+      ["Senha", "senha", "password", true],
+    ],
+    [
+      ["Cadastrar", "btn_primario", "btn_cadastrar_cliente"],
+      ["Cancelar", "btn_terciario", "btn_cadastrar_cancelar"],
+    ],
+    (form, e) => {
+      if (e.submitter.id === "btn_cadastrar_cliente") {
+        const formData = pegarDadosForm(form);
+        console.log(formData);
+        const sucesso = cadastrarEmpresa(formData);
+        if (sucesso) {
+          mostrarMensagem("sucesso", "Cliente salvo.");
+        }
+        document.getElementById("modal_cadastrar").close();
+        setTimeout(
+          () => (window.location.href = baseUrl + "/admin.html"),
+          1200
+        );
+      }
 
-  //   // FECHAR MODAL CADASTRAR
-  //   const btnFecharModal = document.getElementById("btn_fechar_empresa");
-  //   btnFecharModal.addEventListener("click", (e) => {
-  //     e.preventDefault();
-  //     modalCadastrar.close();
-  //   });
+      if (e.submitter.id === "btn_cadastrar_cancelar") {
+        document.getElementById("modal_cadastrar").close();
+      }
+    }
+  );
 
-  //   // CADASTRAR  NOVA EMPRESA
-  //   const btnCadastrar = document.getElementById("btn_cadastrar_empresa");
-  //   btnCadastrar.addEventListener("click", (e) => {
-  //     e.preventDefault();
-  //     const dadosAtualizados = pegarDadosForm(formCadastrar);
-  //     cadastrarEmpresa(dadosAtualizados);
-  //     mostrarMensagem("sucesso", "Cliente salvo.");
-  //     modalEditar.close();
-  //     setTimeout(() => (window.location.href = baseUrl + "/admin.html"), 1200);
-  //   });
+  // ----- MODAL EDITAR ------
+  Modal(root, "modal_editar", "Editar Clientes");
+  Form(
+    "modal_editar",
+    "form_editar",
+    [
+      ["CNPJ", "cnpj_editar", "text", false],
+      ["Razão Social", "razaosocial_editar", "text", false],
+      ["Telefone", "telefone_editar", "text", true],
+      ["E-mail", "email_editar", "email", true],
+      ["Endereço", "endereco_editar", "text", true],
+      ["Senha", "senha_editar", "password", true],
+    ],
+    [
+      ["Salvar", "btn_primario", "btn_editar_salvar"],
+      ["Cancelar", "btn_terciario", "btn_editar_cancelar"],
+      ["Excluir", "btn_quartenario", "btn_editar_excluir"],
+    ],
+    (form, e) => {
+      if (e.submitter.id === "btn_editar_salvar") {
+        const formData = pegarDadosForm(form);
+        const sucesso = atualizarEmpresa(formData);
+        if (sucesso) {
+          mostrarMensagem("sucesso", "Cliente salvo.");
+        }
+        document.getElementById("modal_editar").close();
+        setTimeout(
+          () => (window.location.href = baseUrl + "/admin.html"),
+          1200
+        );
+      }
+      if (e.submitter.id === "btn_editar_excluir") {
+        if (confirm("Tem certeza que deseja excluir?")) {
+          const empresa = pegarDadosForm(form);
+          const sucesso = excluirEmpresa(empresa.cnpj);
+          if (sucesso) {
+            mostrarMensagem("sucesso", "Cliente Excluido");
+          }
+          document.getElementById("modal_editar").close();
+          setTimeout(
+            () => (window.location.href = baseUrl + "/admin.html"),
+            1200
+          );
+        }
+      }
+
+      if (e.submitter.id === "btn_editar_cancelar") {
+        document.getElementById("modal_editar").close();
+      }
+    }
+  );
 }
