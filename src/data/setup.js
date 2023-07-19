@@ -27,17 +27,17 @@ const empresas = [
 
 const produtos = [
   {
-    codigo: "1",
+    codigo: "101",
     tamanho: "Pequeno",
     dimensoes: "22x12x50",
   },
   {
-    codigo: "2",
+    codigo: "102",
     tamanho: "Médio",
     dimensoes: "50x20x50",
   },
   {
-    codigo: "3",
+    codigo: "103",
     tamanho: "Grande",
     dimensoes: "80x60x50",
   },
