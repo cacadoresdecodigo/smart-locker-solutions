@@ -1,5 +1,4 @@
-export default function Modal(...childrens) {
-  const [id, titulo, form] = childrens;
+export default function Modal(root, id, titulo) {
   const dialog = document.createElement("dialog");
   dialog.id = id;
   dialog.classList.add("modal");
@@ -7,6 +6,5 @@ export default function Modal(...childrens) {
   title.id = "titulo";
   title.textContent = titulo;
   dialog.appendChild(title);
-  dialog.appendChild(form);
-  return dialog;
+  root.appendChild(dialog);
 }

@@ -1,5 +1,5 @@
-export default function Table(...params) {
-  const [dados, idTabela, headers] = params;
+export default function Table(root, ...params) {
+  const [dados, idTabela, headers, handler] = params;
 
   const table = document.createElement("table");
   table.setAttribute("id", idTabela);
@@ -32,5 +32,9 @@ export default function Table(...params) {
   }
 
   table.appendChild(tbody);
-  return table;
+  root.appendChild(table);
+
+  if (handler) {
+    handler(table);
+  }
 }

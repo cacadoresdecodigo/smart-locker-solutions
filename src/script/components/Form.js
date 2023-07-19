@@ -1,5 +1,9 @@
-export default function Form(campos, btnData) {
+import Button from "./Button.js";
+
+export default function Form(rootId, formId, campos, btnData, handler) {
+  const root = document.getElementById(rootId);
   const form = document.createElement("form");
+  form.id = formId;
 
   const linha = document.createElement("div");
   linha.classList.add("formulario_linha");
@@ -27,13 +31,15 @@ export default function Form(campos, btnData) {
   acoes.classList.add("acoes");
 
   for (let i = 0; i < btnData.length; i++) {
-    const button = document.createElement("button");
-    button.classList.add(btnData[i][1]);
-    button.textContent = btnData[i][0];
-    button.id = btnData[i][2];
-    acoes.appendChild(button);
+    Button(acoes, btnData[i][2], btnData[i][1], btnData[i][0]);
   }
 
   form.appendChild(acoes);
-  return form;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    handler(form, e);
+  });
+
+  root.appendChild(form);
 }
