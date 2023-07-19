@@ -58,6 +58,6 @@ form.addEventListener("submit", (e) => {
     );
     setTimeout(() => {
       window.location.href = "./index.html";
-    }, 4000);
+    }, 2500);
   }
 });
