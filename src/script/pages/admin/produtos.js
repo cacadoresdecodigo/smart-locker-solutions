@@ -62,7 +62,7 @@ export function renderizarTabelaProdutos(root, produtos) {
 
   // ----- MODAL CADASTRAR ------
 
-  Modal(root, "modal_cadastrar", "Cadastrar Clientes");
+  Modal(root, "modal_cadastrar", "Cadastrar Produtos");
   Form(
     "modal_cadastrar",
     "form_cadastrar",
