@@ -7,8 +7,9 @@ export function atualizarProduto(dadosAtualizados) {
   for (let i = 0; i < produtos.length; i++) {
     if (produtos[i].codigo === dadosAtualizados.codigo) {
       update(produtos, dadosAtualizados);
+      load(produtos, "produtos");
+      return true;
     }
   }
-
-  load(produtos, "produtos");
+  return false;
 }

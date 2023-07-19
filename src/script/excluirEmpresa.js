@@ -15,9 +15,10 @@ export function excluirEmpresa(cnpj) {
 
   if (!jaExiste) {
     alert("Usuario não existe");
-    return;
+    return false;
   }
 
   remove(cnpj, empresas);
   load(empresas, "empresas");
+  return true;
 }
