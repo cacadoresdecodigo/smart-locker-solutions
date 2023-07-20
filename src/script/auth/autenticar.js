@@ -2,15 +2,21 @@ import { sync } from "../../data/locastorage.js";
 
 export function autenticar(credenciais, chave) {
   const local = sync(chave);
-
-  for (let element of local) {
+  let equal;
+  for (let i = 0; i < local.length; i++) {
+  
     if (
-      element.email == credenciais.inputEmail &&
-      element.senha == credenciais.inputSenha
+      local[i].email === credenciais.inputEmail &&
+      local[i].senha === credenciais.inputSenha
+
     ) {
-      return true;
+      equal = true;
+    
     } else {
-      return false;
+      equal = false;
+    
     }
   }
+  return equal;
 }
+
